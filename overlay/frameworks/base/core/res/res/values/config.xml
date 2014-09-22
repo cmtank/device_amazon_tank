@@ -108,4 +108,7 @@
     off until the normal polling interval. A value < 0 indicates infinite. -->
     <integer name="config_ntpRetry">-1</integer>
 
+    <!-- Apps that are authorized to access shared accounts -->
+    <string name="config_appsAuthorizedForSharedAccounts">;com.android.tv.settings;</string>
+
 </resources>
