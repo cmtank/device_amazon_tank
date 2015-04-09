@@ -22,5 +22,12 @@
     <bool name="def_wifi_on">true</bool>
     <bool name="def_lockscreen_disabled">true</bool>
 
+    <!-- non-tv specific overlays -->
+    <bool name="def_accelerometer_rotation">false</bool>
+    <bool name="def_lockscreen_disabled">true</bool>
+    <bool name="def_device_provisioned">true</bool>
+    <bool name="def_stay_on_while_plugged_in">true</bool>
+    <integer name="def_max_dhcp_retries">0</integer>
+
 </resources>
 

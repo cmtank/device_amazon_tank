@@ -96,4 +96,12 @@
     <!-- Wifi background scan support -->
     <bool name="config_wifi_background_scan_support">true</bool>
 
+    <!-- non-tv specific overlays -->
+    <integer name="config_deviceHardwareKeys">0</integer>
+    <integer name="config_deviceHardwareWakeKeys">0</integer>
+    <bool name="config_voice_capable">false</bool>
+    <bool name="config_sms_capable">false</bool>
+    <bool name="config_hasPermanentDpad">true</bool>
+    <bool name="config_defaultInTouchMode">false</bool>
+
 </resources>
