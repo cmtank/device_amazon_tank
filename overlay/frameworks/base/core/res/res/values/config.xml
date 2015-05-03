@@ -130,4 +130,7 @@
     <!-- Don't allow volume change on the device. -->
     <bool name="config_useFixedVolume">true</bool>
 
+    <!-- If supported and enabled, are dreams activated when asleep and charging? (by default) -->
+    <bool name="config_dreamsActivatedOnSleepByDefault">true</bool>
+
 </resources>
