@@ -1,0 +1,27 @@
+# mount point   fstype    device    [device2]
+
+/dev/block/platform/mtk-msdc.0/by-name/boot     /boot       emmc      defaults        defaults
+/dev/block/platform/mtk-msdc.0/by-name/UBOOT    /UBOOT      emmc      defaults        defaults
+/dev/block/platform/mtk-msdc.0/by-name/TEE1     /TEE1       emmc      defaults        defaults
+/dev/block/platform/mtk-msdc.0/by-name/cache    /cache      ext4      defaults        defaults
+/dev/block/platform/mtk-msdc.0/by-name/userdata /data       ext4      defaults        defaults,length=-16385
+/dev/block/platform/mtk-msdc.0/by-name/MISC     /misc       emmc      defaults        defaults
+/dev/block/platform/mtk-msdc.0/by-name/recovery /recovery   emmc      defaults        defaults
+/dev/block/mmcblk0boot0                         /boot0      emmc      defaults        defaults
+/dev/block/platform/mtk-msdc.0/by-name/system   /system     ext4      defaults        defaults
+
+
+
+
+#/boot       emmc    /dev/block/platform/mtk-msdc.0/by-name/boot
+#/UBOOT      emmc    /dev/block/platform/mtk-msdc.0/by-name/UBOOT
+#/TEE1       emmc    /dev/block/platform/mtk-msdc.0/by-name/TEE1
+#/cache      ext4    /dev/block/platform/mtk-msdc.0/by-name/cache
+#/data       ext4    /dev/block/platform/mtk-msdc.0/by-name/userdata
+#/misc       emmc    /dev/block/platform/mtk-msdc.0/by-name/MISC
+#/recovery   emmc    /dev/block/platform/mtk-msdc.0/by-name/recovery
+#/boot0      emmc    /dev/block/mmcblk0boot0
+#/system     ext4    /dev/block/platform/mtk-msdc.0/by-name/system
+#/external_sd    vfat    /dev/block/platform/mtk-msdc.1/mmcblk1p1        /dev/block/platform/mtk-msdc.1/mmcblk1  flags=display="Micro #SDcard";storage;wipeingui;removable
+#/usb-otg        vfat    /dev/block/platform/mt_usb/sda1                 /dev/block/platform/mt_usb/sda          flags=display="USB-#OTG";storage;wipeingui;removable
+
