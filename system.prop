@@ -1,0 +1,54 @@
+ro.sf.lcd_density=160
+
+#support opengles 2.0 3.0 is 196608
+ro.opengles.version=131072
+
+ro.audio.silent=0
+
+# MTK, Infinity, 20090720 {
+wifi.interface=wlan0
+# MTK, Infinity, 20090720 }
+
+# MTK, mtk03034, 20101210 {
+ro.mediatek.wlan.wsc=1
+# MTK, mtk03034 20101210}
+# MTK, mtk03034, 20110318 {
+ro.mediatek.wlan.p2p=1
+# MTK, mtk03034 20110318}
+
+# MTK, mtk03034, 20101213 {
+mediatek.wlan.ctia=0
+# MTK, mtk03034 20101213}
+
+#
+wifi.tethering.interface=ap0
+#
+
+wifi.direct.interface=p2p0
+
+# Switching Menu of Mass storage and MTP
+ro.sys.usb.storage.type=mtp,mass_storage
+
+# USB BICR function
+ro.sys.usb.bicr=yes
+
+# USB Charge only function
+ro.sys.usb.charging.only=yes
+
+#smartvolume
+ro.smartvolume.config=/system/vendor/smartvolume/ford/
+ro.config.notification_sound=Verso.ogg
+
+ro.sf.hwrotation=270
+
+# maximum backup size for factory reset whitelist in kB
+ro.recovery.wl.maxstore=524288
+
+#uart kernel log
+persist.sys.uart.klog.enable=n
+
+# Audio Rotation
+ro.audio.monitorRotation=true
+
+# wifi rssi->bar thresholds
+persist.wifi.rssi.thresholds=-92,-77,-68,-63
