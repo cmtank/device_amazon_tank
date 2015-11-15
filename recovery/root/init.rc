@@ -16,6 +16,7 @@ on init
     export ANDROID_ROOT /system
     export ANDROID_DATA /data
     export EXTERNAL_STORAGE /sdcard
+    export LD_LIBRARY_PATH .:/sbin
 
     symlink /system/etc /etc
 
