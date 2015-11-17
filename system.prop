@@ -52,3 +52,7 @@ ro.audio.monitorRotation=true
 
 # wifi rssi->bar thresholds
 persist.wifi.rssi.thresholds=-92,-77,-68,-63
+
+# no RIL
+ro.carrier=wifi-only
+ro.radio.noril=yes
