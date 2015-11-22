@@ -51,12 +51,14 @@ PRODUCT_COPY_FILES += \
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 $(call inherit-product-if-exists, vendor/amazon/ford/ford-vendor.mk)
 
+# network
 PRODUCT_PACKAGES += \
     netd
     
-# wifi
+# IPv6 tethering
 PRODUCT_PACKAGES += \
-	lib_driver_cmd_mtk
+    ebtables \
+    ethertypes
 
 DEVICE_PACKAGE_OVERLAYS += device/amazon/ford/overlay
 
