@@ -1,1 +1,1 @@
-symlink("/system/framework/svc.jar", "/system/framework/fireossvc.jar");
+symlink("/system/framework/org.cyanogenmod.platform.jar", "/system/framework/fireossvc.jar");
