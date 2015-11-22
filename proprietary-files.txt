@@ -4,8 +4,9 @@ lib/egl/libGLESv2_mali.so
 lib/hw/amzn_dha.mt8127.so
 lib/hw/amzn_drmprov.mt8127.so
 lib/hw/audio.a2dp.default.so
-#lib/hw/audio_policy.default.so
-#lib/hw/audio_policy.stub.so
+
+lib/hw/audio_policy.default.so
+lib/hw/audio_policy.stub.so
 lib/hw/audio.primary.default.so
 lib/hw/audio.primary.mt8127.so
 lib/hw/audio.r_submix.default.so
@@ -90,9 +91,6 @@ vendor/smartvolume/ford/speaker.csv
 vendor/smartvolume/ford/wired_headphone.csv
 vendor/smartvolume/ford/wired_headset.csv
 
-#lib/libaudioflinger.so
-#bin/netd
-
 etc/media_codecs_google_audio.xml
 etc/media_codecs_google_telephony.xml
 etc/media_codecs_google_video.xml
@@ -132,8 +130,7 @@ etc/.tp/thermal.off.conf
 etc/.tp/thermal.policy.conf
 
 bin/wmt_loader
-#bin/wpa_cli
-#bin/wpa_supplicant
+bin/wpa_supplicant
 
 bin/6620_launcher
 bin/6620_wmt_concurrency
