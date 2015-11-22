@@ -35,7 +35,7 @@ ro.sys.usb.bicr=yes
 # USB Charge only function
 ro.sys.usb.charging.only=yes
 
-#smartvolume
+# smartvolume
 ro.smartvolume.config=/system/vendor/smartvolume/ford/
 ro.config.notification_sound=Verso.ogg
 
@@ -56,3 +56,9 @@ persist.wifi.rssi.thresholds=-92,-77,-68,-63
 # no RIL
 ro.carrier=wifi-only
 ro.radio.noril=yes
+
+# set default USB configuration
+persist.sys.usb.config=mtp
+
+# add support for USB storage type
+persist.sys.isUsbOtgEnabled=1
