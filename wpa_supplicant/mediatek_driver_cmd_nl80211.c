@@ -19,9 +19,9 @@
 #include "android_drv.h"
 #endif
 
-int send_and_recv_msgs(struct wpa_driver_nl80211_data *drv, struct nl_msg *msg,
+/*int send_and_recv_msgs(struct wpa_driver_nl80211_data *drv, struct nl_msg *msg,
 		       int (*valid_handler)(struct nl_msg *, void *),
-		       void *valid_data);
+		       void *valid_data);*/
 
 static int testmode_sta_statistics_handler(struct nl_msg *msg, void *arg)
 {
@@ -165,10 +165,10 @@ static int wpa_driver_nl80211_testmode(void *priv, const u8 *data,
             {
                 struct wpa_driver_get_sta_statistics_params *sta_params = data;
             
-    		    return send_and_recv_msgs(drv, msg, testmode_sta_statistics_handler, sta_params->buf);            
+    		    return 0;// send_and_recv_msgs(drv, msg, testmode_sta_statistics_handler, sta_params->buf);            
             }
         default:
-            return send_and_recv_msgs(drv, msg, NULL, NULL);
+            return 0;// send_and_recv_msgs(drv, msg, NULL, NULL);
     }
     
  nla_put_failure:

@@ -32,11 +32,10 @@ WPA_SUPPL_DIR_INCLUDE = $(WPA_SUPPL_DIR)/src \
 	$(WPA_SUPPL_DIR)/src/l2_packet \
 	$(WPA_SUPPL_DIR)/src/utils \
 	$(WPA_SUPPL_DIR)/src/wps \
-	$(WPA_SUPPL_DIR)/wpa_supplicant \
-	external/libnl/include
+	$(WPA_SUPPL_DIR)/wpa_supplicant
 
 ifdef CONFIG_DRIVER_NL80211
-WPA_SUPPL_DIR_INCLUDE += external/libnl-headers
+WPA_SUPPL_DIR_INCLUDE += external/libnl/include
 WPA_SRC_FILE += mediatek_driver_cmd_nl80211.c
 endif
 
