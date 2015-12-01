@@ -62,3 +62,7 @@ persist.sys.usb.config=mtp
 
 # add support for USB storage type
 persist.sys.isUsbOtgEnabled=1
+
+# multi-user support
+fw.max_users=5
+fw.show_multiuserui=1
