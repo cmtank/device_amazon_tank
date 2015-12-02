@@ -51,6 +51,18 @@ PRODUCT_COPY_FILES += \
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 $(call inherit-product-if-exists, vendor/amazon/ford/ford-vendor.mk)
 
+# Audio
+PRODUCT_PACKAGES += \
+	audio.a2dp.default
+    
+# Bluetooth
+PRODUCT_PACKAGES += \
+	bluetooth.default
+	
+# Power
+PRODUCT_PACKAGES += \
+	power.default
+
 # network
 PRODUCT_PACKAGES += \
     netd
