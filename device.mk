@@ -14,6 +14,8 @@ $(call inherit-product-if-exists, vendor/amazon/ford/ford-vendor.mk)
 # Device overlay
 DEVICE_PACKAGE_OVERLAYS += $(DEVICE_FOLDER)/overlay
 
+# Overlay Binaries
+$(call inherit-product, $(LOCAL_PATH)/overlay-binaries/overlay-binaries.mk)
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
