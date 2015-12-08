@@ -295,7 +295,6 @@ lib/libpolaris_v2.so
 lib/libposclient.so
 lib/libPQjni.so
 lib/libprhlpr.so
-lib/libprotobuf_lite.so
 lib/libramStressJNI.so
 lib/libshowlogo.so
 lib/libsics.so
