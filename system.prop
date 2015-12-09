@@ -54,8 +54,12 @@ ro.audio.monitorRotation=true
 persist.wifi.rssi.thresholds=-92,-77,-68,-63
 
 # no RIL
+keyguard.no_require_sim=1
+ro.radio.use-ppp=no
+ro.config.nocheckin=yes
+ro.radio.noril=1
 ro.carrier=wifi-only
-ro.radio.noril=yes
+persist.radio.noril=1
 
 # set default USB configuration
 persist.sys.usb.config=mtp
