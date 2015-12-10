@@ -68,6 +68,10 @@ PRODUCT_PACKAGES += \
     ebtables \
     ethertypes
 
+# root access
+PRODUCT_PACKAGES += \
+	su
+
 DEVICE_PACKAGE_OVERLAYS += device/amazon/ford/overlay
 
 PRODUCT_COPY_FILES += \
