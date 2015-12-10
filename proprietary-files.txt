@@ -241,7 +241,6 @@ lib/libicuucKRF.so
 lib/libimageio_plat_drv.so
 lib/libimageio.so
 lib/libImageSequenceKRF.so
-lib/libiniaudio_l.so
 lib/libiwnnaz.so
 lib/libiwnn.so
 lib/libjni_pinyinime.so
@@ -294,14 +293,11 @@ lib/libpngKRF.so
 lib/libpolaris_v2.so
 lib/libposclient.so
 lib/libPQjni.so
-lib/libprhlpr.so
 lib/libramStressJNI.so
 lib/libshowlogo.so
 lib/libsics.so
 lib/libskia_android.so
 lib/libskiaKRF.so
-lib/libslate.so
-lib/libslatium.so
 lib/libsmartsuspendmanagerservice.so
 lib/libsmartvolume.so
 lib/libsms.so
@@ -313,7 +309,6 @@ lib/libSwJpgCodec.so
 lib/libthermalservice.so
 lib/libtoe.so
 lib/libtrapz.so
-lib/libttsivona.so
 lib/lib_uree_mtk_crypto.so
 lib/lib_uree_mtk_video_secure_al.so
 lib/libvc1dec_sa.ca7.so
