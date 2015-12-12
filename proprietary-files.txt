@@ -2,8 +2,6 @@ lib/egl/libEGL_mali.so
 lib/egl/libGLESv1_CM_mali.so
 lib/egl/libGLESv2_mali.so
 
-lib/hw/amzn_dha.mt8127.so
-lib/hw/amzn_drmprov.mt8127.so
 lib/hw/audio_policy.default.so
 lib/hw/audio_policy.stub.so
 lib/hw/audio.primary.default.so
@@ -96,6 +94,11 @@ etc/media_codecs.xml
 etc/media_profiles.xml
 etc/monitoring.conf
 etc/mtk_omx_core.cfg
+
+vendor/lib/mediadrm/libdrmclearkeyplugin.so
+vendor/lib/mediadrm/libmockdrmcryptoplugin.so
+vendor/lib/mediadrm/libplayreadydrmplugin.so
+vendor/lib/mediadrm/libwvdrmengine.so
 
 etc/wifi/p2p_supplicant_overlay.conf
 etc/wifi/wpa_supplicant.conf
