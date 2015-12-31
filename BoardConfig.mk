@@ -17,6 +17,8 @@ TARGET_BOOTLOADER_BOARD_NAME := ford
 # Bootloader
 TARGET_NO_BOOTLOADER := true
 
+TARGET_USE_BUILT_BOOTIMAGE := device/amazon/ford/boot.img
+
 # Architecture
 TARGET_ARCH := arm
 TARGET_CPU_VARIANT := cortex-a7
@@ -88,7 +90,8 @@ BLOCK_BASED_OTA := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/mt_usb/musb-hdrc.0.auto/gadget/lun%d/file
 
 # Cyanogen recovery
-RECOVERY_VARIANT := cm
+DEVICE_RESOLUTION := 800x1280
+RECOVERY_VARIANT := twrp
 TARGET_RECOVERY_FSTAB := device/amazon/ford/recovery/root/recovery.fstab
 TARGET_RECOVERY_INITRC := device/amazon/ford/recovery/root/init.rc
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
