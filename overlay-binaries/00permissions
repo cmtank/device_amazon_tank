@@ -1,0 +1,4 @@
+#!/system/bin/sh
+
+/system/bin/chmod 666 /sys/kernel/debug/ion/heaps/*
+/system/bin/chmod -R 777 /data/nvram/APCFG/APRDCL
