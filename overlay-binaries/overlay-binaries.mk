@@ -11,3 +11,6 @@ PRODUCT_COPY_FILES += \
 	$(OVERLAY_BIN)/99sudaemon:system/etc/init.d/99sudaemon \
 	$(OVERLAY_BIN)/00permissions:system/etc/init.d/00permissions
 
+# Swype gesture lib
+PRODUCT_COPY_FILES += \
+	$(OVERLAY_BIN)/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
