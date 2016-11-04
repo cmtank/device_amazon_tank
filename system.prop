@@ -44,7 +44,7 @@ ro.sf.hwrotation=270
 # maximum backup size for factory reset whitelist in kB
 ro.recovery.wl.maxstore=524288
 
-#uart kernel log
+# uart kernel log
 persist.sys.uart.klog.enable=n
 
 # Audio Rotation
@@ -62,7 +62,7 @@ ro.carrier=wifi-only
 persist.radio.noril=1
 
 # set default USB configuration
-persist.sys.usb.config=mtp
+persist.sys.usb.config=mtp,adb
 
 # add support for USB storage type
 persist.sys.isUsbOtgEnabled=1
