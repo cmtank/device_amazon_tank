@@ -44,6 +44,16 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml
 
+# Config files
+PRODUCT_COPY_FILES += \
+    $(DEVICE_FOLDER)/configs/media_codecs.xml:system/etc/media_codecs.xml \
+    $(DEVICE_FOLDER)/configs/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
+    $(DEVICE_FOLDER)/configs/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
+    $(DEVICE_FOLDER)/configs/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
+    $(DEVICE_FOLDER)/configs/media_profiles.xml:system/etc/media_profiles.xml \
+    $(DEVICE_FOLDER)/configs/mtk_omx_core.cfg:system/etc/mtk_omx_core.cfg
+
+
 $(call inherit-product-if-exists, vendor/amazon/ford/ford-vendor.mk)
 
 # Audio

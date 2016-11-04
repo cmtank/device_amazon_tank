@@ -50,13 +50,7 @@ etc/firmware/ROMv2_patch_1_0_hdr.bin
 etc/firmware/ROMv2_patch_1_1_hdr.bin
 etc/firmware/WIFI_RAM_CODE_8127
 etc/firmware/WMT_SOC.cfg
-etc/media_codecs_google_audio.xml
-etc/media_codecs_google_telephony.xml
-etc/media_codecs_google_video.xml
-etc/media_codecs.xml
-etc/media_profiles.xml
 etc/monitoring.conf
-etc/mtk_omx_core.cfg
 etc/wifi/p2p_supplicant_overlay.conf
 etc/wifi/wpa_supplicant_overlay.conf
 etc/wifi/wpa_supplicant.conf
