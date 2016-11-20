@@ -1,4 +1,5 @@
-symlink("/system/framework/org.cyanogenmod.platform.jar", "/system/framework/fireossvc.jar");
+symlink("/system/framework/org.cyanogenmod.platform.jar", "/system/framework/fosinit.jar");
+symlink("/system/framework/org.cyanogenmod.platform.jar", "/system/framework/fosservices.jar");
 delete("/system/bin/install-recovery.sh");
 rename("/system/bin/new-install-recovery.sh", "/system/bin/install-recovery.sh");
 set_metadata("/system/etc/install-recovery-2.sh", "uid", 0, "gid", 0, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:install_recovery_exec:s0");
