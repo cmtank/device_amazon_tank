@@ -92,21 +92,23 @@ BLOCK_BASED_OTA := false
 # Vold
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/mt_usb/musb-hdrc.0.auto/gadget/lun%d/file
 
-# Cyanogen recovery
-DEVICE_RESOLUTION := 800x1280
+# TWRP
 RECOVERY_VARIANT := twrp
-TARGET_RECOVERY_FSTAB := device/amazon/ford/recovery/root/recovery.fstab
-TARGET_RECOVERY_INITRC := device/amazon/ford/recovery/root/init.rc
-BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
-BOARD_USES_MMCUTILS := true
-BOARD_HAS_LARGE_FILESYSTEM := true
-BOARD_HAS_NO_MISC_PARTITION := true
-BOARD_HAS_NO_SELECT_BUTTON := true
+DEVICE_RESOLUTION := 600x1024
+TW_EXCLUDE_MTP := false
 RECOVERY_SDCARD_ON_DATA := true
-TW_INTERNAL_STORAGE_PATH := "/sdcard"
-TW_INTERNAL_STORAGE_MOUNT_POINT := "/sdcard"
-TW_EXTERNAL_STORAGE_PATH := "/external_sd"
-TW_EXTERNAL_STORAGE_MOUNT_POINT := "/external_sd"
+TW_BRIGHTNESS_PATH := /sys/devices/platform/leds-mt65xx/leds/lcd-backlight/brightness
+TARGET_RECOVERY_LCD_BACKLIGHT_PATH := /sys/devices/platform/leds-mt65xx/leds/lcd-backlight/brightness
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+TARGET_PREBUILT_RECOVERY_KERNEL := device/amazon/ford/kernel
+TARGET_RECOVERY_INITRC := device/amazon/ford/recovery/root/init.rc
+TARGET_RECOVERY_FSTAB := device/amazon/ford/recovery/root/recovery.fstab
+RECOVERY_FSTAB_VERSION := 2
+TW_THEME := landscape_mdpi
+#TWRP_EVENT_LOGGING := true
+RECOVERY_TOUCHSCREEN_SWAP_XY := true
+#RECOVERY_GRAPHICS_USE_LINELENGTH := true
+#RECOVERY_TOUCHSCREEN_FLIP_Y := true 
+RECOVERY_TOUCHSCREEN_FLIP_X := true
+BOARD_HAS_FLIPPED_SCREEN := true
 
-# CUSTOM RELEASE TOOLS FOR EXTRA LINKS IN UPDATER-SCRIPT
-TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/amazon/ford/releasetools/ota_from_target_files

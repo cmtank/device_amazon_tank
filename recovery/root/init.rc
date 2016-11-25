@@ -9,7 +9,7 @@ on early-init
     setcon u:r:init:s0
 
     start ueventd
-    start healthd
+#    start healthd
 
 on init
     export PATH /sbin:/system/bin
@@ -72,7 +72,7 @@ on boot
     ifup lo
     hostname localhost
     domainname localdomain
-
+    
     class_start default
 
 # Load properties from /system/ + /factory after fs mount.
@@ -107,9 +107,9 @@ service ueventd /sbin/ueventd
     critical
     seclabel u:r:ueventd:s0
 
-service healthd /sbin/healthd -r
-    critical
-    seclabel u:r:healthd:s0
+#service healthd /sbin/healthd -r
+#    critical
+#    seclabel u:r:healthd:s0
 
 service recovery /sbin/recovery
     seclabel u:r:recovery:s0
@@ -148,3 +148,12 @@ on property:sys.storage.ums_enabled=0
     write /sys/class/android_usb/android0/enable 0
     write /sys/class/android_usb/android0/functions adb
     write /sys/class/android_usb/android0/enable ${service.adb.root}
+
+
+on property:sys.usb.config=mtp,adb
+    stop adbd
+    write /sys/class/android_usb/android0/enable 0
+    write /sys/class/android_usb/android0/functions mtp,adb
+    write /sys/class/android_usb/android0/enable 1
+    start adbd
+
