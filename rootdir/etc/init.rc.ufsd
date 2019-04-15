@@ -1,0 +1,4 @@
+
+# Loading UFSD module on boot
+on boot
+    insmod /system/lib/modules/ufsd.ko
