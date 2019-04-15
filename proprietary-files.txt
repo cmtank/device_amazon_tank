@@ -167,7 +167,6 @@ lib/libMtkOmxAIVPlayer.so
 lib/libMtkOmxCore.so
 lib/libMtkOmxMp3Dec.so
 lib/libMtkOmxVdec.so
-lib/libMtkOmxVenc.so
 lib/libmtkshifter.so
 lib/libnvram_daemon_callback.so
 lib/libnvram_platform.so

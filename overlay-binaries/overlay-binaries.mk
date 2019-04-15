@@ -14,3 +14,7 @@ PRODUCT_COPY_FILES += \
 # Swype gesture lib
 PRODUCT_COPY_FILES += \
 	$(OVERLAY_BIN)/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
+
+# Use mediatek video encoder from FireOS 5.1.4
+PRODUCT_COPY_FILES += \
+	$(OVERLAY_BIN)/libMtkOmxVenc.so:system/lib/libMtkOmxVenc.so
