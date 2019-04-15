@@ -1,9 +1,4 @@
 OVERLAY_BIN := device/amazon/ford/overlay-binaries
-
-# install-recovery.sh used to initialise init.d support	
-PRODUCT_COPY_FILES += \
-	$(OVERLAY_BIN)/install-recovery.sh:system/bin/new-install-recovery.sh \
-	$(OVERLAY_BIN)/install-recovery.sh:system/etc/install-recovery-2.sh
 	
 # Install init.d scripts
 PRODUCT_COPY_FILES += \
