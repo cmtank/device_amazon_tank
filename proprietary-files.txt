@@ -82,8 +82,6 @@ lib/lib_uree_mtk_crypto.so
 lib/lib_uree_mtk_video_secure_al.so
 lib/lib3a.so
 lib/libaed.so
-lib/libAIVMemoryAllocator.so
-lib/libAIVSecureRenderer.so
 lib/libaudio-resampler.so
 lib/libaudiocompensationfilter.so
 lib/libaudiocomponentengine.so
@@ -151,6 +149,7 @@ lib/libMali.so
 lib/libmatv_cust.so
 lib/libmediacodecloggerservice.so
 lib/libmediacodeclogger.so
+lib/libmediaerrorlogger.so
 lib/libmhalImageCodec.so
 lib/libmmprofile.so
 lib/libmongoose.so
