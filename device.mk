@@ -94,6 +94,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	su
 
+WITH_EXFAT := true
+
 DEVICE_PACKAGE_OVERLAYS += device/amazon/ford/overlay
 
 
