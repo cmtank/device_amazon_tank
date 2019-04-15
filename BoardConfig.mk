@@ -17,8 +17,6 @@ TARGET_BOOTLOADER_BOARD_NAME := ford
 # Bootloader
 TARGET_NO_BOOTLOADER := true
 
-TARGET_USE_BUILT_BOOTIMAGE := device/amazon/ford/boot.img
-
 # Architecture
 TARGET_ARCH := arm
 TARGET_CPU_VARIANT := cortex-a7
@@ -33,7 +31,6 @@ BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x04000000 --tags_offset 0x00000100
 BOARD_KERNEL_CMDLINE :=
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 2048
-TARGET_PREBUILT_KERNEL := device/amazon/ford/kernel
 TARGET_KERNEL_SOURCE := kernel/amazon/ford
 TARGET_KERNEL_CONFIG := ford_cyanogenmod_defconfig
 TARGET_KERNEL_VARIANT_CONFIG := ford_cyanogenmod_defconfig
