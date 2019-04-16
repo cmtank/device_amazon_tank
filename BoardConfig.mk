@@ -91,7 +91,7 @@ BLOCK_BASED_OTA := false
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/mt_usb/musb-hdrc.0.auto/gadget/lun%d/file
 
 # TWRP
-RECOVERY_VARIANT := twrp
+#RECOVERY_VARIANT := twrp
 DEVICE_RESOLUTION := 600x1024
 TW_EXCLUDE_MTP := false
 RECOVERY_SDCARD_ON_DATA := true
