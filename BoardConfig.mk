@@ -31,7 +31,7 @@ BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x04000000 --tags_offset 0x00000100
 BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 2048
-TARGET_KERNEL_SOURCE := kernel/amazon/ford
+TARGET_KERNEL_SOURCE := kernel/amazon/mt8127-common
 TARGET_KERNEL_CONFIG := ford_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-eabi-
 
