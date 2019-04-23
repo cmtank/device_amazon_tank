@@ -119,6 +119,12 @@ on init
     chmod 0660 /dev/ebc
     chown system audio /dev/ebc
 
+# Chnage ION permissions
+    chmod 0666 /sys/kernel/debug/ion/heaps/*
+
+# Change NVRAM permissions
+    chmod -R 0777 /data/nvram/APCFG/APRDCL
+
 # Change Camera permission
     chmod 0660 /dev/camera-sysram
     chmod 0660 /dev/camera-isp
