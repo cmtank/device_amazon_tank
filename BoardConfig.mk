@@ -8,13 +8,10 @@ TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_COMMON)/amazon/mt8172-common/include
 # inherit from the proprietary version
 -include $(VENDOR_COMMON)/BoardConfigVendor.mk
 
-TARGET_OTA_ASSERT_DEVICE := ford
-
-
 # Platform
 TARGET_BOARD_PLATFORM := mt8127
 TARGET_BOARD_PLATFORM_GPU := mali-450mp4
-TARGET_BOOTLOADER_BOARD_NAME := ford
+
 
 # Bootloader
 TARGET_NO_BOOTLOADER := true
