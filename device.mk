@@ -1,11 +1,11 @@
 LOCAL_PATH := device/amazon/ford
 
 # Device overlay
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+DEVICE_PACKAGE_OVERLAYS += $(DEVICE_COMMON)/overlay
 
 # Install init.d scripts
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/99exfat-support:system/etc/init.d/99exfat-support
+    $(DEVICE_COMMON)/configs/99exfat-support:system/etc/init.d/99exfat-support
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
@@ -36,16 +36,16 @@ PRODUCT_COPY_FILES += \
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/rootdir,root)
+    $(call find-copy-subdir-files,*,$(DEVICE_COMMON)/rootdir,root)
 
 # Config files
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
-    $(LOCAL_PATH)/configs/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
-    $(LOCAL_PATH)/configs/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
-    $(LOCAL_PATH)/configs/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
-    $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml \
-    $(LOCAL_PATH)/configs/mtk_omx_core.cfg:system/etc/mtk_omx_core.cfg
+    $(DEVICE_COMMON)/configs/media_codecs.xml:system/etc/media_codecs.xml \
+    $(DEVICE_COMMON)/configs/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
+    $(DEVICE_COMMON)/configs/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
+    $(DEVICE_COMMON)/configs/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
+    $(DEVICE_COMMON)/configs/media_profiles.xml:system/etc/media_profiles.xml \
+    $(DEVICE_COMMON)/configs/mtk_omx_core.cfg:system/etc/mtk_omx_core.cfg
 
 
 # Audio
@@ -84,4 +84,4 @@ $(call inherit-product, frameworks/native/build/tablet-7in-hdpi-1024-dalvik-heap
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/amazon/ford/ford-vendor.mk)
+$(call inherit-product-if-exists, $(VENDOR_COMMON)/mt8127-common-vendor.mk)

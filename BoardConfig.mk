@@ -1,8 +1,12 @@
+DEVICE_COMMON := device/amazon/mt8172-common
+KERNEL_COMMON := kernel/amazon/mt8127-common
+VENDOR_COMMON := vendor/amazon/mt8127-common
+
 # headers
-TARGET_SPECIFIC_HEADER_PATH := device/amazon/ford/include
+TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_COMMON)/amazon/mt8172-common/include
 
 # inherit from the proprietary version
--include vendor/amazon/ford/BoardConfigVendor.mk
+-include $(VENDOR_COMMON)/BoardConfigVendor.mk
 
 TARGET_OTA_ASSERT_DEVICE := ford
 
@@ -25,12 +29,12 @@ TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_SMP := true
 
 # Kernel Config
-BOARD_CUSTOM_BOOTIMG_MK := device/amazon/ford/mkbootimg.mk
+BOARD_CUSTOM_BOOTIMG_MK := device/amazon/$(DEVICE_COMMON)/mkbootimg.mk
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x04000000 --tags_offset 0x00000100
 BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 2048
-TARGET_KERNEL_SOURCE := kernel/amazon/mt8127-common
+TARGET_KERNEL_SOURCE := $(KERNEL_COMMON)
 TARGET_KERNEL_CONFIG := ford_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-eabi-
 
@@ -60,10 +64,10 @@ WIFI_DRIVER_FW_PATH_STA:=P2P
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_MTK := true
 BOARD_BLUETOOTH_DOES_NOT_USE_RFKILL := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/amazon/ford/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_COMMON)/bluetooth
 
 # Graphics
-BOARD_EGL_CFG := device/amazon/ford/configs/egl.cfg
+BOARD_EGL_CFG := $(DEVICE_COMMON)/configs/egl.cfg
 USE_OPENGL_RENDERER := true
 TARGET_USES_C2D_COMPOSITION := true
 TARGET_USES_OVERLAY := true
@@ -98,8 +102,8 @@ TW_BRIGHTNESS_PATH := /sys/devices/platform/leds-mt65xx/leds/lcd-backlight/brigh
 TARGET_RECOVERY_LCD_BACKLIGHT_PATH := /sys/devices/platform/leds-mt65xx/leds/lcd-backlight/brightness
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 TARGET_PREBUILT_RECOVERY_KERNEL := device/amazon/ford/kernel
-TARGET_RECOVERY_INITRC := device/amazon/ford/recovery/root/init.rc
-TARGET_RECOVERY_FSTAB := device/amazon/ford/recovery/root/recovery.fstab
+TARGET_RECOVERY_INITRC := $(DEVICE_COMMON)/recovery/root/init.rc
+TARGET_RECOVERY_FSTAB := $(DEVICE_COMMON)/recovery/root/recovery.fstab
 RECOVERY_FSTAB_VERSION := 2
 TW_THEME := landscape_mdpi
 #TWRP_EVENT_LOGGING := true
