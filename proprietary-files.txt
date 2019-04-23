@@ -18,7 +18,6 @@ bin/devicetype_service
 bin/display
 bin/dump-ramdump.sh
 bin/ext4_resize
-bin/factory
 bin/idme
 bin/kdestroy
 bin/kinit
@@ -43,7 +42,6 @@ etc/.tp/.ht120.mtc
 etc/.tp/thermal.conf
 etc/.tp/thermal.off.conf
 etc/.tp/thermal.policy.conf
-etc/bluetooth/bt_did.conf
 etc/bluetooth/bt_stack.conf
 etc/firmware/ROMv2_patch_1_0_hdr.bin
 etc/firmware/ROMv2_patch_1_1_hdr.bin
