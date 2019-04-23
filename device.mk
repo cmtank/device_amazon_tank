@@ -40,23 +40,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml
 
 # Ramdisk
-PRODUCT_PACKAGES += \
-    factory_init.project.rc \
-    factory_init.rc \
-    fstab.mt8127 \
-    init.base.rc \
-    init.build.rc \
-    init.charging.rc \
-	init.mt8127.rc \
-	init.mt8127.usb.rc \
-	init.project.rc \
-    init.rc.ufsd \
-    init.recovery.mt8127.rc \
-    init.ssd.rc \
-    meta_init.project.rc \
-    meta_init.rc \
-	ueventd.mt8127.rc \
-    enableswap.sh
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/rootdir,root)
 
 # Config files
 PRODUCT_COPY_FILES += \
