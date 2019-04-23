@@ -139,9 +139,6 @@ lib/libiwnn.so
 lib/libiwnnaz.so
 lib/libJpgDecPipe.so
 lib/libJpgEncPipe.so
-lib/libkindlepdf.so
-lib/libKindleReaderJNI.so
-lib/libLangDetectorJNI.so
 lib/libm4u.so
 lib/libMali.so
 lib/libmatv_cust.so
