@@ -198,7 +198,6 @@ vendor/lib/mediadrm/libmockdrmcryptoplugin.so
 vendor/lib/mediadrm/libwvdrmengine.so
 xbin/chkexfat
 xbin/chkufsd
-xbin/fsutil
 xbin/memalloc
 xbin/mkexfat
 xbin/start-ufsd
