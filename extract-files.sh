@@ -17,7 +17,7 @@
 set -e
 
 VENDOR=amazon
-DEVICE_COMMON=ford
+DEVICE_COMMON=mt8127-common
 
 # Load extractutils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
