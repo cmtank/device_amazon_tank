@@ -1,13 +1,11 @@
 LOCAL_PATH := device/amazon/ford
 
-DEVICE_FOLDER := device/amazon/ford
-
 # Device overlay
-DEVICE_PACKAGE_OVERLAYS += $(DEVICE_FOLDER)/overlay
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Install init.d scripts
 PRODUCT_COPY_FILES += \
-    $(DEVICE_FOLDER)/configs/99exfat-support:system/etc/init.d/99exfat-support
+    $(LOCAL_PATH)/configs/99exfat-support:system/etc/init.d/99exfat-support
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
@@ -42,12 +40,12 @@ PRODUCT_COPY_FILES += \
 
 # Config files
 PRODUCT_COPY_FILES += \
-    $(DEVICE_FOLDER)/configs/media_codecs.xml:system/etc/media_codecs.xml \
-    $(DEVICE_FOLDER)/configs/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
-    $(DEVICE_FOLDER)/configs/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
-    $(DEVICE_FOLDER)/configs/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
-    $(DEVICE_FOLDER)/configs/media_profiles.xml:system/etc/media_profiles.xml \
-    $(DEVICE_FOLDER)/configs/mtk_omx_core.cfg:system/etc/mtk_omx_core.cfg
+    $(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
+    $(LOCAL_PATH)/configs/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
+    $(LOCAL_PATH)/configs/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
+    $(LOCAL_PATH)/configs/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
+    $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml \
+    $(LOCAL_PATH)/configs/mtk_omx_core.cfg:system/etc/mtk_omx_core.cfg
 
 
 # Audio
