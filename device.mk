@@ -8,8 +8,9 @@ $(call inherit-product-if-exists, vendor/amazon/ford/ford-vendor.mk)
 # Device overlay
 DEVICE_PACKAGE_OVERLAYS += $(DEVICE_FOLDER)/overlay
 
-# Overlay Binaries
-$(call inherit-product, $(LOCAL_PATH)/overlay-binaries/overlay-binaries.mk)
+# Install init.d scripts
+PRODUCT_COPY_FILES += \
+    $(DEVICE_FOLDER)/configs/99exfat-support:system/etc/init.d/99exfat-support
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
