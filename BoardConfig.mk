@@ -65,7 +65,7 @@ BOARD_BLUETOOTH_DOES_NOT_USE_RFKILL := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/amazon/ford/bluetooth
 
 # Graphics
-BOARD_EGL_CFG := device/amazon/ford/egl.cfg
+BOARD_EGL_CFG := device/amazon/ford/configs/egl.cfg
 USE_OPENGL_RENDERER := true
 TARGET_USES_C2D_COMPOSITION := true
 TARGET_USES_OVERLAY := true
