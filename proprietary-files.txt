@@ -41,7 +41,6 @@ bin/wpa_supplicant
 etc/.tp/.ht120.mtc
 etc/.tp/thermal.conf
 etc/.tp/thermal.off.conf
-etc/.tp/thermal.policy.conf
 etc/bluetooth/bt_did.conf
 etc/bluetooth/bt_stack.conf
 etc/firmware/ROMv2_patch_1_0_hdr.bin
