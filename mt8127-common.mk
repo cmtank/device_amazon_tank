@@ -1,4 +1,4 @@
-LOCAL_PATH := device/amazon/ford
+DEVICE_COMMON := device/amazon/mt8127-common
 
 # Device overlay
 DEVICE_PACKAGE_OVERLAYS += $(DEVICE_COMMON)/overlay

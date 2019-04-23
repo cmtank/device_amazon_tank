@@ -1,9 +1,9 @@
-DEVICE_COMMON := device/amazon/mt8172-common
+DEVICE_COMMON := device/amazon/mt8127-common
 KERNEL_COMMON := kernel/amazon/mt8127-common
 VENDOR_COMMON := vendor/amazon/mt8127-common
 
 # headers
-TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_COMMON)/amazon/mt8172-common/include
+TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_COMMON)/include
 
 # inherit from the proprietary version
 -include $(VENDOR_COMMON)/BoardConfigVendor.mk
@@ -26,7 +26,7 @@ TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_SMP := true
 
 # Kernel Config
-BOARD_CUSTOM_BOOTIMG_MK := device/amazon/$(DEVICE_COMMON)/mkbootimg.mk
+BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_COMMON)/mkbootimg.mk
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x04000000 --tags_offset 0x00000100
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 2048
