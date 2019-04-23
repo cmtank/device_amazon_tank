@@ -77,9 +77,6 @@ PRODUCT_PACKAGES += \
 
 WITH_EXFAT := true
 
-DEVICE_PACKAGE_OVERLAYS += device/amazon/ford/overlay
-
-
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 # call dalvik heap config
