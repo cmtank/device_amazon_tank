@@ -1,5 +1,3 @@
-BOARD_VENDOR := amazon
-
 # headers
 TARGET_SPECIFIC_HEADER_PATH := device/amazon/ford/include
 
