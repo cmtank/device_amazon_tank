@@ -2,9 +2,6 @@ LOCAL_PATH := device/amazon/ford
 
 DEVICE_FOLDER := device/amazon/ford
 
-# Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/amazon/ford/ford-vendor.mk)
-
 # Device overlay
 DEVICE_PACKAGE_OVERLAYS += $(DEVICE_FOLDER)/overlay
 
@@ -53,8 +50,6 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_FOLDER)/configs/mtk_omx_core.cfg:system/etc/mtk_omx_core.cfg
 
 
-$(call inherit-product-if-exists, vendor/amazon/ford/ford-vendor.mk)
-
 # Audio
 PRODUCT_PACKAGES += \
 	audio.a2dp.default
@@ -92,3 +87,6 @@ $(call inherit-product, frameworks/native/build/tablet-7in-hdpi-1024-dalvik-heap
 
 # call hwui memory config
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
+
+# Get non-open-source specific aspects
+$(call inherit-product-if-exists, vendor/amazon/ford/ford-vendor.mk)
