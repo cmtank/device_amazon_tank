@@ -35,7 +35,7 @@ fi
 setup_vendor "$DEVICE_COMMON" "$VENDOR" "$LINEAGE_ROOT" true
 
 # Copyright headers and guards
-write_headers "ttab"
+write_headers "ford"
 
 # The standard blobs
 write_makefiles "$MY_DIR"/proprietary-files.txt
