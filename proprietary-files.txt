@@ -194,7 +194,6 @@ vendor/lib/libwvdrm_L3.so
 vendor/lib/libwvm.so
 vendor/lib/libWVStreamControlAPI_L3.so
 vendor/lib/mediadrm/libmockdrmcryptoplugin.so
-vendor/lib/mediadrm/libplayreadydrmplugin.so
 vendor/lib/mediadrm/libwvdrmengine.so
 vendor/smartvolume/ford/anlg_dock_headset.csv
 vendor/smartvolume/ford/aux_digital.csv
