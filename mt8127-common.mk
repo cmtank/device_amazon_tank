@@ -1,4 +1,5 @@
 DEVICE_COMMON := device/amazon/mt8127-common
+VENDOR_COMMON := vendor/amazon/mt8127-common
 
 # Device overlay
 DEVICE_PACKAGE_OVERLAYS += $(DEVICE_COMMON)/overlay
