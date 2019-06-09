@@ -1,12 +1,6 @@
 import init.coredump.rc
 import init.rc.ufsd
 
-on init
-    ##ACOS_MOD_BEGIN {amazon_logd}
-    mkdir /dev/logd 0770 logd log
-    mount tmpfs tmpfs /dev/logd mode=0770,uid=1036,gid=1036,size=512K,context=u:object_r:logd_tmpfs:s0
-    ##ACOS_MOD_END {amazon_logd}
-
 on post-fs
     # Turn on swap
     swapon_all /fstab.mt8127
