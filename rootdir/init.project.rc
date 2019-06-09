@@ -1,5 +1,4 @@
 import init.coredump.rc
-import init.rc.ufsd
 
 on post-fs
     # Turn on swap
@@ -54,6 +53,7 @@ on post-fs-data
 
 on boot
     export SECONDARY_STORAGE_USB /storage/usbotg
+    insmod /system/lib/modules/ufsd.ko
 
 service fuse_usbotg /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/usbotg /storage/usbotg
     class late_start
