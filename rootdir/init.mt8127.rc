@@ -6,6 +6,33 @@ import init.mt8127.usb.rc
 import init.ssd.rc
    
 on init
+    # See storage config details at http://source.android.com/tech/storage/
+    # fix non-shell uid process can not access shared-sd
+    mkdir /mnt/shell 0700 shell shell
+
+    chown shell sdcard_r /mnt/shell
+    mkdir /mnt/shell/emulated 0700 shell shell
+    mkdir /mnt/shell/emulated/0 0700 shell shell
+    mkdir /storage/emulated 0555 root root
+
+    mkdir /mnt/media_rw/sdcard1 0700 media_rw media_rw
+    mkdir /storage/sdcard1 0700 root root
+
+    export EXTERNAL_STORAGE /storage/emulated/legacy
+
+    export EMULATED_STORAGE_SOURCE /mnt/shell/emulated
+    export EMULATED_STORAGE_TARGET /storage/emulated
+
+    export SECONDARY_STORAGE /storage/sdcard1
+    
+    # Support legacy paths
+    symlink /storage/emulated/legacy /sdcard
+    symlink /storage/emulated/legacy /mnt/sdcard
+    symlink /storage/emulated/legacy /storage/sdcard0
+    symlink /mnt/shell/emulated/0 /storage/emulated/legacy
+    symlink /mnt/shell/emulated/0 /storage/emulated/0
+    symlink /storage/sdcard1 /mnt/sdcard2
+
     export USBOTG_STORAGE /storage/usbotg
     mount tmpfs tmpfs /mnt/media_rw/ mode=0755,uid=1000,gid=1000
     mkdir /mnt/media_rw/usbotg 0700 media_rw media_rw
@@ -185,6 +212,7 @@ on fs
     write /proc/bootprof "INIT:eMMC:Mount_START"
     mount_all /fstab.mt8127
     write /proc/bootprof "INIT:eMMC:Mount_END"
+    setprop ro.crypto.fuse_sdcard true
     
 # RGX init
 service pvrsrvctl /system/vendor/bin/pvrsrvctl --start 
@@ -196,6 +224,7 @@ service pvrsrvctl /system/vendor/bin/pvrsrvctl --start
 on post-fs-data
     mkdir /data/nvram 2771 root system
     mkdir /data/media 0770 media_rw media_rw
+    chown media_rw media_rw /data/media
     chmod 0660 /data/misc/wifi/p2p_supplicant.conf
 
 
@@ -805,3 +834,10 @@ service dhcpcd_eth0 /system/bin/dhcpcd -BK -dd
 	group net_admin net_raw
 	disabled
 	oneshot
+
+service sdcard /system/bin/sdcard -u 1023 -g 1023 -l /data/media /mnt/shell/emulated
+    class late_start
+
+service fuse_sdcard1 /system/bin/sdcard -u 1023 -g 1023 -w 1023 -d /mnt/media_rw/sdcard1 /storage/sdcard1
+    class late_start
+    disabled
