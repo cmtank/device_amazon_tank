@@ -1,5 +1,3 @@
-import init.coredump.rc
-
 on post-fs
     # Turn on swap
     swapon_all /fstab.mt8127
@@ -8,11 +6,6 @@ on post-fs
     write /proc/sys/vm/page-cluster 0
 
 on post-fs-data
-
-#
-# Connectivity related device nodes & configuration (begin)
-#
-
     # /dev/ttyMT2 for Connectivity BT/FM/GPS usage
     chmod 0660 /dev/ttyMT2
     chown system system /dev/ttyMT2
@@ -21,7 +14,7 @@ on post-fs-data
     chmod 0660 /dev/wmtWifi
     chown system system /dev/wmtWifi
 
-# GPS
+    # GPS
     chown gps gps /sys/class/gpsdrv/gps/pwrctl
     chown gps gps /sys/class/gpsdrv/gps/suspend
     chown gps gps /sys/class/gpsdrv/gps/state
@@ -29,27 +22,24 @@ on post-fs-data
     chown gps gps /sys/class/gpsdrv/gps/status
     chmod 0660 /dev/stpgps
 
-# WiFi
+    # WiFi
     mkdir /data/misc/wifi 0770 wifi wifi
     mkdir /data/misc/wifi/sockets 0770 wifi wifi
     mkdir /data/misc/wpa_supplicant 0770 wifi wifi 
     chown wifi wifi /data/misc/wifi
 
-# FM Radio device node
+    # FM Radio device node
     chmod 0660 /dev/fm
     chown system media /dev/fm
 
-# Volume key swapping based on rotation orientation
+    # Volume key swapping based on rotation orientation
     chmod 0640 /dev/mtk-kpd
     chown root audio /dev/mtk-kpd
 
-# Char device for BT 3.0 HS
+    # Char device for BT 3.0 HS
     mknod /dev/ampc0 c 151 0
     chown bluetooth bluetooth /dev/ampc0
     chmod 0660 /dev/ampc0
-
-#
-# Connectivity related device nodes & configuration (end)
 
 on boot
     export SECONDARY_STORAGE_USB /storage/usbotg
@@ -62,9 +52,6 @@ service fuse_usbotg /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/usbotg /
 service fuse_sdcard1 /system/bin/sdcard -u 1023 -g 1023 -w 1023 -d /mnt/media_rw/sdcard1 /storage/sdcard1
     class late_start
     disabled
-#
-# Connectivity related services (Begin)
-#
 
 service wmtLoader /system/bin/wmt_loader
     user root
@@ -72,25 +59,24 @@ service wmtLoader /system/bin/wmt_loader
     class main
     oneshot
 
-
 service conn_launcher /system/bin/6620_launcher -p /system/etc/firmware/
     user system
     group system
     class core
 
 service thermal_log /system/bin/thermal_log.sh
-        class late_start
-        user system
-        group system
-        oneshot
-        disabled
+    class late_start
+    user system
+    group system
+    oneshot
+    disabled
 
 service thermal_qa /system/bin/ThermalBenchmarkAutomation.sh
-       class late_start
-       user root
-       group root
-       oneshot
-       disabled
+    class late_start
+    user root
+    group root
+    oneshot
+    disabled
 
 service battery_log /system/bin/battery_log.sh
 	class main
@@ -149,18 +135,13 @@ on property:debug.log.dmesg.enable=y
 on property:debug.log.logcat.enable=y
 	start logcat_log
 
-#
+
 # Turn on/off UART kernel log
-#
 on property:persist.sys.uart.klog.enable=y
 	write /sys/mtuart/conse 1
+
 on property:persist.sys.uart.klog.enable=n
 	write /sys/mtuart/conse 0
-
-#
-# Connectivity related services (End)
-#
-
 
 service rpmb_svc /system/bin/rpmb_svc
 	class main
