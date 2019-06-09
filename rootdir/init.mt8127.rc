@@ -1,5 +1,5 @@
 
-#connectivity related init script
+
 import init.project.rc
 import init.charging.rc
 import init.mt8127.usb.rc
