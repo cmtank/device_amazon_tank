@@ -17,7 +17,7 @@ on init
     # See storage config details at http://source.android.com/tech/storage/
     # fix non-shell uid process can not access shared-sd
     mkdir /mnt/shell 0700 shell shell
-    #chmod 0750 /mnt/shell
+
     chown shell sdcard_r /mnt/shell
     mkdir /mnt/shell/emulated 0700 shell shell
     mkdir /mnt/shell/emulated/0 0700 shell shell

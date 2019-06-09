@@ -576,11 +576,6 @@ service ap_daemon /system/bin/wpa_supplicant \
 on property:persist.uartconsole.enable=1
     write /proc/mtprintk 1
 
-# Update the second boot logo
-# service bootlogoupdater /system/bin/boot_logo_updater
-# 	class core
-# 	oneshot
-
 service auto_shutdown /system/bin/sh /system/bin/auto_shutdown.sh
 	oneshot
 	disabled
