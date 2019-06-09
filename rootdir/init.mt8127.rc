@@ -182,42 +182,9 @@ start NvRAMAgent
     chmod 0660 /sys/devices/system/cpu/cpufreq/hotplug/cpu_num_base
 
 on fs
-    
-#    export EXTERNAL_STORAGE /mnt/sdcard
-#    mkdir /mnt/sdcard 0000 system system
-#    symlink /mnt/sdcard /sdcard
-
-
-# mount mtd partitions
-    # Mount /system rw first to give the filesystem a chance to save a checkpoint
-    #write /proc/bootprof "INIT:NAND:Mount_START"
-    #mount yaffs2 mtd@system /system
-
-# via: set ril and pppd
-    #chown root /system/bin/pppd
-    #chmod 4755 /system/bin/pppd
-    #chown root /system/etc/ppp/ip-up-cdma
-    #chmod 4755 /system/et/ppp/ip-up-cdma
-    #chown root /system/etc/ppp/ipv6-up-cdma
-    #chmod 4755 /system/etc/ppp/ipv6-up-cdma
-    #chown root /system/etc/ppp/link-down-cdma
-    #chmod 4755 /system/etc/ppp/link-down-cdma
-    #mount yaffs2 mtd@system /system ro remount
-    #mount yaffs2 mtd@userdata /data nosuid nodev
-    #mount yaffs2 mtd@cache /cache nosuid nodev
-    #write /proc/bootprof "INIT:NAND:Mount_END"
-
-#on fs_property:ro.mount.fs=EXT4
     write /proc/bootprof "INIT:eMMC:Mount_START"
-    mount ext4 /dev/block/platform/mtk-msdc.0/by-name/system /system noatime wait ro commit=1,nodelalloc,discard,errors=panic
-    exec /system/bin/ext4_resize
     mount_all /fstab.mt8127
-    mount squashfs loop@/system/sqfs/container.sqfs /mnt/sqfs wait ro context=u:object_r:squashfs_file:s0
     write /proc/bootprof "INIT:eMMC:Mount_END"
-    mount iso9660 loop@/system/etc/iAmCdRom.iso /mnt/cd-rom ro
-    
-    #change partition permission
-    exec /system/etc/partition_permission.sh
     
 # RGX init
 service pvrsrvctl /system/vendor/bin/pvrsrvctl --start 
