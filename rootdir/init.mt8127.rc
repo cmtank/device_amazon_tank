@@ -835,6 +835,21 @@ service dhcpcd_eth0 /system/bin/dhcpcd -BK -dd
 	disabled
 	oneshot
 
+on charger
+    mount ext4 /dev/block/platform/mtk-msdc.0/by-name/system /system ro wait
+    start kpoc_charger
+    start bat_logging
+
+service kpoc_charger /system/bin/kpoc_charger
+    user root
+    group root
+    class charger
+
+service bat_logging /system/bin/battery_lifetime_data
+    class main
+    user root
+    group root
+
 service sdcard /system/bin/sdcard -u 1023 -g 1023 -l /data/media /mnt/shell/emulated
     class late_start
 
