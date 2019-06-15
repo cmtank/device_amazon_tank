@@ -64,48 +64,6 @@ service conn_launcher /system/bin/6620_launcher -p /system/etc/firmware/
     group system
     class core
 
-service thermal_log /system/bin/thermal_log.sh
-    class late_start
-    user system
-    group system
-    oneshot
-    disabled
-
-service thermal_qa /system/bin/ThermalBenchmarkAutomation.sh
-    class late_start
-    user root
-    group root
-    oneshot
-    disabled
-
-service battery_log /system/bin/battery_log.sh
-	class main
-	user root
-	group system
-	oneshot
-	disabled
-
-service temperature_log /system/bin/temperature_log.sh
-	class main
-	user root
-	group system
-	oneshot
-	disabled
-
-service dmesg_log /system/bin/dmesg_log.sh
-	class main
-	user root
-	group system
-	oneshot
-	disabled
-
-service logcat_log /system/bin/logcat_log.sh
-	class main
-	user root
-	group system
-	oneshot
-	disabled
-
 service amzn_drmprov /system/bin/amzn_drmprov_check
 	class main
 	user root
@@ -116,25 +74,6 @@ on property:sys.boot_completed=1
     write /sys/kernel/mm/ksm/pages_to_scan 100
     write /sys/kernel/mm/ksm/sleep_millisecs 700
     write /sys/kernel/mm/ksm/run 1
-
-on property:debug.log.thermal_qa.enable=y
-	start thermal_qa
-
-on property:vold.decrypt=trigger_restart_framework
-	start dmesg_log
-
-on property:debug.log.battery.enable=y
-	start battery_log
-
-on property:debug.log.temperature.enable=y
-	start temperature_log
-
-on property:debug.log.dmesg.enable=y
-	start dmesg_log
-
-on property:debug.log.logcat.enable=y
-	start logcat_log
-
 
 # Turn on/off UART kernel log
 on property:persist.sys.uart.klog.enable=y
