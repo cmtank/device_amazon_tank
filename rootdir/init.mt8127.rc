@@ -197,13 +197,6 @@ on fs
     write /proc/bootprof "INIT:eMMC:Mount_END"
     setprop ro.crypto.fuse_sdcard true
     
-# RGX init
-service pvrsrvctl /system/vendor/bin/pvrsrvctl --start 
-    class core
-    user root
-    group root
-    oneshot
-
 on post-fs-data
     mkdir /data/nvram 2771 root system
     mkdir /data/media 0770 media_rw media_rw
@@ -441,6 +434,13 @@ on charger
 
 
 ########## SERVICES ##########
+
+# RGX init
+service pvrsrvctl /system/vendor/bin/pvrsrvctl --start 
+    class core
+    user root
+    group root
+    oneshot
 
 # drm operation server
 service kisd /system/bin/kisd
