@@ -2,7 +2,8 @@ import init.project.rc
 import init.mt8127.usb.rc
 
 on early-init
-    # nothing to see here
+    # mount debugfs for ftrace
+    mount debugfs none /sys/kernel/debug
 
 on init
     # See storage config details at http://source.android.com/tech/storage/
@@ -177,10 +178,7 @@ on init
 	setprop persist.sys.aal.function 0
     
     # Enable AAL
-    setprop ro.mediatek.aal 1
-
-    # mount debugfs for ftrace
-    mount debugfs none /sys/kernel/debug   
+    setprop ro.mediatek.aal 1   
     
     # change owner
     chown system system /proc/bootprof
