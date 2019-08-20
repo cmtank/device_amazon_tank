@@ -56,6 +56,8 @@ lib/libwlm.so
 lib/libusb.so
 lib/libusbhost.so
 lib/libhdmi.so
+lib/libhdmiservice.so
+lib/libm.so
 lib/libmp2dec_sa.ca7.so
 lib/libmp2dec_sb.ca7.so
 vendor/lib/soundfx/libswdap.so
@@ -87,6 +89,7 @@ lib/hw/audio.usb.default.so
 lib/hw/audio.primary.mt8127.so
 lib/hw/audio_policy.stub.so
 lib/hw/audio.r_submix.default.so
+lib/hw/audio_policy.default.so
 lib/hw/gralloc.mt8127.so
 lib/hw/hdmi_cec.default.so
 lib/hw/keystore.mt8127.so
@@ -204,8 +207,24 @@ vendor/firmware/brcm/bcm43569a2-firmware.bin
 vendor/firmware/brcm/bcm43569a2-firmware-test.bin
 vendor/firmware/brcm/bcm43569a2.nvm
 vendor/firmware/BCM43569A2_001.003.004.0148.0000.hcd
+
+vendor/data/amz.rsa
+vendor/data/trapz_scripts.tar.gz
+vendor/data/trapz_xml/1.txt
+vendor/data/trapz_xml/2.txt
+vendor/data/trapz_xml/3.txt
+vendor/data/trapz_xml/4.txt
+vendor/data/ttp/facebook-orca.rsa
+vendor/data/ttp/qq.rsa
+vendor/data/ttp/skype-phoenix.rsa
+vendor/data/ttp/skype-raider.rsa
+vendor/data/ttp/tecla-2013.rsa
+vendor/data/ttp/tecla-2014.rsa
+vendor/data/ttp/viber-voip.rsa
+
 #xbin
 xbin/trapz
 #xbin/vitals_collection_agent
 xbin/wl
+bin/hdmi
 
