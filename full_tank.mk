@@ -9,6 +9,8 @@ endif
 PRODUCT_COPY_FILES += \
         $(LOCAL_KERNEL):kernel
 
+LOCAL_SHARED_LIBRARIES:= libtinycompress
+
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
@@ -54,7 +56,8 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-	audio.a2dp.default
+	audio.a2dp.default \
+	libtinycompress
     
 # Bluetooth
 PRODUCT_PACKAGES += \
