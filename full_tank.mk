@@ -81,7 +81,7 @@ PRODUCT_PACKAGES += \
 	su
 # Shims	
 PRODUCT_PACKAGES += \
-libshim_asp \
+        libshim_asp \
 
 WITH_EXFAT := true
 
