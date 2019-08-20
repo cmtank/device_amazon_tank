@@ -228,3 +228,4 @@ xbin/trapz
 xbin/wl
 bin/hdmi
 
+lib/libdeviceinfoservice.so
