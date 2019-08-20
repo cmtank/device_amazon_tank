@@ -22,12 +22,10 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter austin ford,$(TARGET_DEVICE)),)
+ifeq ($(TARGET_DEVICE),tank)
 
 ifneq ($(TARGET_SIMULATOR),true)
 include $(call first-makefiles-under,$(LOCAL_PATH))
 endif
-
-include $(CLEAR_VARS)
 
 endif

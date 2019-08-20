@@ -1,12 +1,19 @@
-DEVICE_COMMON := device/amazon/mt8127-common
-VENDOR_COMMON := vendor/amazon/mt8127-common
+LOCAL_PATH := device/amazon/tank
+
+ifeq ($(TARGET_PREBUILT_KERNEL),)
+        LOCAL_KERNEL := $(LOCAL_PATH)/boot.img
+else
+        LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+endif
+
+PRODUCT_COPY_FILES += \
+        $(LOCAL_KERNEL):kernel
+
+# Inherit from the common Open Source product configuration
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
 # Device overlay
-DEVICE_PACKAGE_OVERLAYS += $(DEVICE_COMMON)/overlay
-
-# Install init.d scripts
-PRODUCT_COPY_FILES += \
-    $(DEVICE_COMMON)/configs/99exfat-support:system/etc/init.d/99exfat-support
+DEVICE_PACKAGE_OVERLAYS += device/amazon/tank/overlay
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
@@ -22,7 +29,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
     frameworks/native/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml \
     frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:system/etc/permissions/android.hardware.sensor.accelerometer.xml \
-	frameworks/native/data/etc/android.hardware.sensor.barometer.xml:system/etc/permissions/android.hardware.sensor.barometer.xml \
+    frameworks/native/data/etc/android.hardware.sensor.barometer.xml:system/etc/permissions/android.hardware.sensor.barometer.xml \
     frameworks/native/data/etc/android.hardware.sensor.compass.xml:system/etc/permissions/android.hardware.compass.xml \
     frameworks/native/data/etc/android.hardware.sensor.light.xml:system/etc/permissions/android.hardware.sensor.light.xml \
     frameworks/native/data/etc/android.hardware.sensor.gyroscope.xml:system/etc/permissions/android.hardware.sensor.gyroscope.xml \
@@ -35,19 +42,15 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml
 
-# Ramdisk
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(DEVICE_COMMON)/rootdir,root)
-
 # Config files
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:system/etc/media_codecs_google_video_le.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
-    $(DEVICE_COMMON)/configs/media_codecs.xml:system/etc/media_codecs.xml \
-    $(DEVICE_COMMON)/configs/media_profiles.xml:system/etc/media_profiles.xml \
-    $(DEVICE_COMMON)/configs/mtk_omx_core.cfg:system/etc/mtk_omx_core.cfg
+    device/amazon/tank/configs/media_codecs.xml:system/etc/media_codecs.xml \
+    device/amazon/tank/configs/media_profiles.xml:system/etc/media_profiles.xml \
+    device/amazon/tank/configs/mtk_omx_core.cfg:system/etc/mtk_omx_core.cfg
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -85,4 +88,4 @@ $(call inherit-product, frameworks/native/build/tablet-7in-hdpi-1024-dalvik-heap
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, $(VENDOR_COMMON)/mt8127-common-vendor.mk)
+$(call inherit-product-if-exists, vendor/amazon/tank/tank-vendor.mk)
