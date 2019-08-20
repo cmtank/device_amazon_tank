@@ -92,6 +92,10 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/mt_usb/musb-hdrc.0.auto
 TARGET_OTA_ASSERT_DEVICE := tank
 TARGET_BOOTLOADER_BOARD_NAME := tank
 
+# Shims
+TARGET_LD_SHIM_LIBS := \
+/system/lib/libasp.so|libshim_asp.so \
+
 $(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)
 
 # TWRP
