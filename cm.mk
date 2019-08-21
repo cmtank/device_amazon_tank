@@ -5,6 +5,14 @@ $(call inherit-product, vendor/cm/config/common_full_tv.mk)
 PRODUCT_PACKAGES += \
     LatinIME
 
+# Leanback Keyboard
+PRODUCT_PACKAGES += LeanbackIme
+
+# TvSettings for android tv
+#PRODUCT_PACKAGES += TvSettings
+
+PRODUCT_CHARACTERISTICS := tv
+
 # Include CM LatinIME dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/cm/overlay/dictionaries
 
