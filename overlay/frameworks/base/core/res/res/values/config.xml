@@ -48,6 +48,7 @@
 
     <string-array name="config_forceEnabledComponents" translatable="false">bluetooth
     </string-array>
-
-
+    <!--
+    <bool name="show_ime_with_hard_keyboard">true</bool>
+    -->
 </resources>
