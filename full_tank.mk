@@ -23,6 +23,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 PRODUCT_AAPT_CONFIG := normal mdpi
 PRODUCT_AAPT_PREF_CONFIG := mdpi
 
+#init.d script
+PRODUCT_COPY_FILES += \
+    device/amazon/tank/init.d/init.fosflags.sh:system/etc/init.fosflags.sh
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/tablet_core_hardware.xml:system/etc/permissions/tablet_core_hardware.xml \
