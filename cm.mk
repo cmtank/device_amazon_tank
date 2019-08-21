@@ -1,6 +1,13 @@
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_tv.mk)
 
+# Required CM packages
+PRODUCT_PACKAGES += \
+    LatinIME
+
+# Include CM LatinIME dictionaries
+PRODUCT_PACKAGE_OVERLAYS += vendor/cm/overlay/dictionaries
+
 # Inherit device configuration for Fire TV Stick
 $(call inherit-product, device/amazon/tank/full_tank.mk)
 
