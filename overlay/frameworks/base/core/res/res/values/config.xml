@@ -42,5 +42,12 @@
     
     <!-- Maximum number of supported users -->
     <bool name="config_enableMultiUserUI">false</bool>
-    
+
+    <!-- Whether to start in touch mode -->
+    <bool name="config_defaultInTouchMode">true</bool>
+
+    <string-array name="config_forceEnabledComponents" translatable="false">bluetooth
+    </string-array>
+
+
 </resources>
