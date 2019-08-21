@@ -229,3 +229,6 @@ xbin/wl
 bin/hdmi
 
 lib/libdeviceinfoservice.so
+
+lib/libsoundtriggerservice.so
+lib/libsoundtrigger.so
