@@ -61,6 +61,13 @@ lib/libm.so
 lib/libmp2dec_sa.ca7.so
 lib/libmp2dec_sb.ca7.so
 vendor/lib/soundfx/libswdap.so
+lib/soundfx/libaudiopreprocessing.so
+lib/soundfx/libbundlewrapper.so
+lib/soundfx/libdownmix.so
+lib/soundfx/libeffectproxy.so
+lib/soundfx/libldnhncr.so
+lib/soundfx/libreverbwrapper.so
+lib/soundfx/libvisualizer.so
 vendor/lib/libwvdrm_L1.so
 vendor/lib/libWVStreamControlAPI_L1.so
 vendor/lib/libbt-vendor.so
@@ -232,3 +239,13 @@ lib/libdeviceinfoservice.so
 
 lib/libsoundtriggerservice.so
 lib/libsoundtrigger.so
+
+lib/libaudioeffect_jni.so
+lib/libaudioflinger.so
+lib/libaudiopolicymanager.so
+lib/libaudiopolicyservice.so
+lib/libaudioresampler.so
+lib/libaudiostream.so
+lib/libaudiostream_jni.so
+lib/libaudioutils.so
+
