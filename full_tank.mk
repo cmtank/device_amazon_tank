@@ -25,7 +25,7 @@ PRODUCT_AAPT_PREF_CONFIG := mdpi
 
 #init.d script
 PRODUCT_COPY_FILES += \
-    device/amazon/tank/init.d/init.fosflags.sh:system/etc/init.fosflags.sh
+		      device/amazon/tank/init.d/init.fosflags.sh:system/etc/init.fosflags.sh:755
 
 # Permissions
 PRODUCT_COPY_FILES += \
