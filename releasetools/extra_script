@@ -1,4 +1,4 @@
 mount("ext4", "EMMC", "/dev/block/platform/mtk-msdc.0/by-name/system", "/system", "");
-set_perm(0, 0, 0755, "/system/etc/init.fosflags.sh");
+set_metadata("/system/etc/init.fosflags.sh", "uid", 0, "gid", 0, "mode", 0755, "selabel", "u:object_r:system_file:s0");
 unmount("/system");
 
