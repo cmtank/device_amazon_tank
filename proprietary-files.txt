@@ -250,6 +250,5 @@ lib/libaudiostream_jni.so
 lib/libaudioutils.so
 
 etc/permissions/android.hardware.hdmi.cec.xml
-etc/permissions/com.amazon.tv.devicecontrol.xml
 
 
