@@ -14,6 +14,9 @@ TARGET_BOARD_PLATFORM_GPU := mali-450mp4
 # Bootloader
 TARGET_NO_BOOTLOADER := true
 
+# Extra scripts
+TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/amazon/tank/releasetools/ota_from_target_files
+
 # Architecture
 TARGET_ARCH := arm
 TARGET_CPU_VARIANT := cortex-a7
