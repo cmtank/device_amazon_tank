@@ -6,6 +6,33 @@ else
         LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
 
+
+PRODUCT_IS_ATV_SDK := true
+
+PRODUCT_PACKAGES := \
+    EmulatorSmokeTests \
+    LeanbackSampleApp
+
+$(call inherit-product, device/google/atv/products/atv_base.mk)
+
+DEVICE_PACKAGE_OVERLAYS := \
+    device/google/atv/sdk_overlay \
+    development/sdk_overlay
+
+# Include drawables for various densities.
+PRODUCT_AAPT_CONFIG := normal large xlarge tvdpi hdpi xhdpi xxhdpi
+
+# Add TV skins to SDK, in addition to (not replacing) original SDK tree
+PRODUCT_SDK_ATREE_FILES := \
+    development/build/sdk.atree \
+    device/google/atv/sdk/atv_sdk.atree
+
+# Define the host tools and libs that are parts of the SDK.
+#-include sdk/build/product_sdk.mk
+#-include development/build/product_sdk.mk
+
+#include $(SRC_TARGET_DIR)/product/emulator.
+
 PRODUCT_COPY_FILES += \
         $(LOCAL_KERNEL):kernel
 
@@ -20,12 +47,12 @@ DEVICE_PACKAGE_OVERLAYS += device/amazon/tank/overlay
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Device uses high-density artwork where available
-PRODUCT_AAPT_CONFIG := normal mdpi
+#PRODUCT_AAPT_CONFIG := normal mdpi
 PRODUCT_AAPT_PREF_CONFIG := mdpi
 
 #init.d script
 PRODUCT_COPY_FILES += \
-		      device/amazon/tank/init.d/init.fosflags.sh:system/etc/init.fosflags.sh:755
+		      device/amazon/tank/init.d/init.fosflags.sh:system/etc/init.fosflags.sh
 
 # Permissions
 PRODUCT_COPY_FILES += \

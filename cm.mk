@@ -2,10 +2,11 @@
 $(call inherit-product, vendor/cm/config/common_full_tv.mk)
 
 # Required CM packages
-PRODUCT_PACKAGES += \
-    LatinIME
+#PRODUCT_PACKAGES += \
+#    LatinIME
 
-# Leanback Keyboard
+# Leanback 
+PRODUCT_PACKAGES += LeanbackLauncher
 PRODUCT_PACKAGES += LeanbackIme
 
 # TvSettings for android tv
