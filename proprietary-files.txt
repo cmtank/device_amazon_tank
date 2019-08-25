@@ -251,4 +251,6 @@ lib/libaudioutils.so
 
 etc/permissions/android.hardware.hdmi.cec.xml
 
+vendor/lib/liboemcrypto.so
+lib/lib_uree_mtk_modular_drm.so
 
