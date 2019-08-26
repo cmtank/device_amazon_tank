@@ -9,6 +9,7 @@ else
   sleep 120
   settings --user 0 put secure show_ime_with_hard_keyboard 1
   settings --user 0 put global bluetooth_on 1
+  settings --user 0 put system screen_off_timeout 900000
   service call bluetooth_manager 8
   echo 1 > $FILE
 fi
