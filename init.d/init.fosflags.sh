@@ -11,6 +11,7 @@ else
   settings --user 0 put global bluetooth_on 1
   settings --user 0 put system screen_off_timeout 900000
   service call bluetooth_manager 8
+  settings --user 0 put global policy_control immersive.status=*
   echo 1 > $FILE
 fi
 
