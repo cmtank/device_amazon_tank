@@ -15,5 +15,7 @@
   <remove-project name="cm12-amami/android_build" />
   <project name="cmtank/android_build" path="build" remote="github" revision="cm-12.1" />
 
+  <remove-project name="cm12-amami/android_frameworks_base" />
+  <project name="cmtank/android_frameworks_base" path="frameworks/base" remote="github" revision="cm-12.1" />
 </manifest>
 
