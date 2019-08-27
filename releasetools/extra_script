@@ -1,4 +1,5 @@
 mount("ext4", "EMMC", "/dev/block/platform/mtk-msdc.0/by-name/system", "/system", "");
 set_metadata("/system/etc/init.fosflags.sh", "uid", 0, "gid", 0, "mode", 0755, "selabel", "u:object_r:system_file:s0");
+set_metadata("/system/priv-app/Trebuchet", "uid", 0, "gid", 0, "mode", 0000, "selabel", "u:object_r:system_file:s0");
 unmount("/system");
 
