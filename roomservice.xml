@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <project name="cmtank/device_amazon_tank" path="device/amazon/tank" remote="github" revision="cm-12.1" />
+  <project name="cmtank/vendor_amazon_tank" path="vendor/amazon/tank" remote="github" revision="cm-12.1" />
+
+  <project name="LineageOS/android_hardware_broadcom_wlan" path="hardware/broadcom/wlan" remote="github" revision="cm-12.1" />
+
+  <remove-project name="cm12-amami/android_system_core" />
+  <project name="cmtank/android_system_core" path="system/core" remote="github" revision="cm-12.1" />
+
+  <remove-project name="LineageOS/android_device_google_atv" />
+  <project name="cmtank/android_device_google_atv" path="device/google/atv" remote="github" revision="cm-12.1" />
+
+  <remove-project name="cm12-amami/android_build" />
+  <project name="cmtank/android_build" path="build" remote="github" revision="cm-12.1" />
+
+</manifest>
+
