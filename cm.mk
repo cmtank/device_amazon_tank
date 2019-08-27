@@ -8,6 +8,7 @@ $(call inherit-product, vendor/cm/config/common_full_tv.mk)
 # Leanback 
 PRODUCT_PACKAGES += LeanbackLauncher
 PRODUCT_PACKAGES += LeanbackIme
+PRODUCT_PACKAGES += Overscan
 
 # TvSettings for android tv
 #PRODUCT_PACKAGES += TvSettings
