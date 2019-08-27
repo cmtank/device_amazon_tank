@@ -146,7 +146,6 @@ lib/libsoundtriggerservice.so
 lib/libsoundtrigger.so
 lib/libspeech_enh_lib.so
 lib/libstagefrighthw.so
-lib/libstagefright_omx.so
 lib/libSwJpgCodec.so
 lib/libthermalservice.so
 lib/libtinyalsa.so

@@ -88,7 +88,8 @@ PRODUCT_PACKAGES += \
     libdashplayer \
     libdivxdrmdecrypt \
     libmm-omxcore \
-    libstagefrighthw
+    libstagefrighthw \
+    libstagefright_omx
 
 # Config files
 PRODUCT_COPY_FILES += \
