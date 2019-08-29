@@ -117,7 +117,6 @@ lib/libmhalImageCodec.so
 lib/libmmprofile.so
 lib/libmp2dec_sa.ca7.so
 lib/libmp2dec_sb.ca7.so
-lib/libmp2dec_sb.ca7.so
 lib/libmp4enc_sa.ca7.so
 lib/libmsbc_mtk.so
 lib/libm.so
@@ -196,7 +195,6 @@ vendor/lib/drm/libdrmwvmplugin.so
 vendor/lib/libbt-vendor.so
 vendor/lib/libdlb_converter.so
 vendor/lib/libdlbdapstorage.so
-vendor/lib/liboemcrypto.so
 vendor/lib/liboemcrypto.so
 vendor/lib/libstagefright_soft_ddpdec.so
 vendor/lib/libwvdrm_L1.so
