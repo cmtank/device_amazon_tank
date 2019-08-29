@@ -29,10 +29,6 @@ etc/media_codecs_google_telephony.xml
 etc/media_codecs_google_video.xml
 etc/monitoring.conf
 etc/permissions/android.hardware.hdmi.cec.xml
-etc/.tp/.ht120.mtc
-etc/.tp/thermal.conf
-etc/.tp/thermal.off.conf
-etc/.tp/thermal.policy.conf
 etc/wifi/p2p_supplicant_overlay.conf
 etc/wifi/wpa_supplicant.conf
 etc/wifi/wpa_supplicant_overlay.conf
