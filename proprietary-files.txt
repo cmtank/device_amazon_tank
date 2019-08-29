@@ -27,10 +27,7 @@ etc/firmware/WMT_SOC.cfg
 etc/media_codecs_google_audio.xml
 etc/media_codecs_google_telephony.xml
 etc/media_codecs_google_video.xml
-etc/media_codecs.xml
-etc/media_profiles.xml
 etc/monitoring.conf
-etc/mtk_omx_core.cfg
 etc/permissions/android.hardware.hdmi.cec.xml
 etc/.tp/.ht120.mtc
 etc/.tp/thermal.conf
