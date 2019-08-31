@@ -14,7 +14,6 @@ bin/thermald
 bin/thermal_manager
 bin/wmt_loader
 bin/wpa_supplicant
-etc/audio_policy.conf
 etc/bluetooth/auto_pair_devlist.conf
 etc/bluetooth/bt_did.conf
 etc/bluetooth/btmac.sh
@@ -24,11 +23,7 @@ etc/bluetooth/rfkill_bt.sh
 etc/firmware/ROMv2_patch_1_0_hdr.bin
 etc/firmware/ROMv2_patch_1_1_hdr.bin
 etc/firmware/WMT_SOC.cfg
-etc/media_codecs_google_audio.xml
-etc/media_codecs_google_telephony.xml
-etc/media_codecs_google_video.xml
 etc/monitoring.conf
-etc/permissions/android.hardware.hdmi.cec.xml
 etc/wifi/p2p_supplicant_overlay.conf
 etc/wifi/wpa_supplicant.conf
 etc/wifi/wpa_supplicant_overlay.conf
