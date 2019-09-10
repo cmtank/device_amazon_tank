@@ -1,0 +1,321 @@
+# MTK project .rc configure 
+import init.coredump.rc
+import init.rc.ufsd
+
+on init
+    mkdir /tmp
+    mount tmpfs tmpfs /tmp
+    chmod 1775 /tmp
+
+##ACOS_MOD_BEGIN {amazon_logd}
+    mkdir /dev/logd 0770 logd log
+    mount tmpfs tmpfs /dev/logd mode=0770,uid=1036,gid=1036,size=512K,context=u:object_r:logd_tmpfs:s0
+##ACOS_MOD_END {amazon_logd}
+
+on post-fs
+    # Turn on swap
+    swapon_all /fstab.mt8127
+
+    # Swap in only 1 page at a time
+    write /proc/sys/vm/page-cluster 0
+
+on post-fs-data
+
+    #OOBE
+    mkdir /data/securedStorageLocation 0770 system amz_group
+    mkdir /data/securedStorageLocation/com.amazon.tv.oobe 0770 system amz_group
+    mkdir /data/securedStorageLocation/com.amazon.tv.oobe/videos 0770 system amz_group
+    chmod 0660 /data/securedStorageLocation/com.amazon.tv.oobe/videos/ATVPDKIKX0DER_welcome_video.mp4
+    chmod 0660 /data/securedStorageLocation/com.amazon.tv.oobe/videos/A1PA6795UKMFR9_welcome_video.mp4
+    chmod 0660 /data/securedStorageLocation/com.amazon.tv.oobe/videos/A1F83G8C2ARO7P_welcome_video.mp4
+    chmod 0660 /data/securedStorageLocation/com.amazon.tv.oobe/videos/A1VC38T7YXB528_welcome_video.mp4
+    chown system amz_group /data/securedStorageLocation/com.amazon.tv.oobe/videos/ATVPDKIKX0DER_welcome_video.mp4
+    chown system amz_group /data/securedStorageLocation/com.amazon.tv.oobe/videos/A1PA6795UKMFR9_welcome_video.mp4
+    chown system amz_group /data/securedStorageLocation/com.amazon.tv.oobe/videos/A1F83G8C2ARO7P_welcome_video.mp4
+    chown system amz_group /data/securedStorageLocation/com.amazon.tv.oobe/videos/A1VC38T7YXB528_welcome_video.mp4
+
+    # For enabling adb for the first boot
+    mkdir /data/hwval 0770 system system
+    chmod 0660 /data/hwval/adb_check.bin
+    chown system system /data/hwval/adb_check.bin
+
+    # Create directory for syseng.sh temporary files
+    mkdir /data/syseng 0700 root root
+
+#
+# Connectivity related device nodes & configuration (begin)
+#
+
+#/dev/ttyMT2 for Connectivity BT/FM/GPS usage
+    chmod 0660 /dev/ttyMT2
+    chown system system /dev/ttyMT2
+
+
+# STP, WMT, GPS, FM and BT Driver
+#   insmod /system/lib/modules/mtk_hif_sdio.ko
+#   insmod /system/lib/modules/mtk_stp_wmt.ko
+#   insmod /system/lib/modules/mtk_stp_uart.ko
+#   insmod /system/lib/modules/mtk_stp_gps.ko
+#   insmod /system/lib/modules/mtk_stp_bt.ko
+#   insmod /system/lib/modules/mtk_fm_drv.ko
+#   insmod /system/lib/modules/mtk_wmt_wifi.ko
+
+    insmod /system/lib/modules/mtk_wmt_detect.ko
+
+# Create char device file for WMT, GPS, BT, FM, WIFI
+#    mknod /dev/stpwmt c 190 0;
+#    mknod /dev/stpgps c 191 0;
+#    mknod /dev/stpbt  c 192 0;
+
+#    chmod 0660 /dev/stpwmt
+#    chown system system /dev/stpwmt
+#    
+#    chmod 0660 /dev/wmtdetect
+#    chown system system /dev/wmtdetect
+ 
+    mknod /dev/wmtWifi c 153 0
+    chmod 0660 /dev/wmtWifi
+    chown system system /dev/wmtWifi
+
+# BT
+#    chmod 0660 /dev/stpbt
+#    chown bluetooth radio /dev/stpbt
+
+# GPS
+#    chown gps gps /dev/stpgps
+    chown gps gps /sys/class/gpsdrv/gps/pwrctl
+    chown gps gps /sys/class/gpsdrv/gps/suspend
+    chown gps gps /sys/class/gpsdrv/gps/state
+    chown gps gps /sys/class/gpsdrv/gps/pwrsave
+    chown gps gps /sys/class/gpsdrv/gps/status
+    chmod 0660 /dev/stpgps
+
+# WiFi
+    mkdir /data/misc/wifi 0770 wifi wifi
+    mkdir /data/misc/wifi/sockets 0770 wifi wifi
+    mkdir /data/misc/wpa_supplicant 0770 wifi wifi 
+    chown wifi wifi /data/misc/wifi
+
+# FM Radio device node
+    chmod 0660 /dev/fm
+    chown system media /dev/fm
+
+# Volume key swapping based on rotation orientation
+    chmod 0640 /dev/mtk-kpd
+    chown root audio /dev/mtk-kpd
+
+# Char device for BT 3.0 HS
+    mknod /dev/ampc0 c 151 0
+    chown bluetooth bluetooth /dev/ampc0
+    chmod 0660 /dev/ampc0
+
+# Rfkill device for BT
+chown bluetooth radio /sys/devices/platform/bluetooth_rfkill/rfkill/rfkill0/state
+chmod 0660 /sys/devices/platform/bluetooth_rfkill/rfkill/rfkill0/state
+
+#
+# Connectivity related device nodes & configuration (end)
+
+on boot
+    export SECONDARY_STORAGE_USB /storage/usbotg
+    # Refer to http://source.android.com/devices/tech/storage/index.html
+    # It said, "Starting in Android 4.4, multiple external storage devices are surfaced to developers through 
+    #           Context.getExternalFilesDirs(), Context.getExternalCacheDirs(), and Context.getObbDirs().
+    #           External storage devices surfaced through these APIs must be a semi-permanent part of the device (such as an SD card slot in a battery compartment).
+    #           Developers expect data stored in these locations to be available over long periods of time."
+    # Therefore, if the target has the SD card slot in a battery compartment, we need to specify SECONDARY_STORAGE (*** UN-Comment the following command ***)
+    # 
+    # export SECONDARY_STORAGE /storage/sdcard1
+
+    start syseng
+
+    start btmac
+
+    start rfkill_bt
+
+    # Forward tcp port for adb over Wi-Fi
+    setprop service.adb.tcp.port 5555
+
+    # Disable suspend
+    write /sys/power/wake_lock disablesuspend
+
+    start usb_cp_type
+
+# BT MAC
+    service btmac /system/bin/sh /system/etc/bluetooth/btmac.sh
+    disabled
+    oneshot
+    user root
+
+# BT GPIO toggle
+service rfkill_bt /system/bin/sh system/etc/bluetooth/rfkill_bt.sh
+    class core
+    user root
+    oneshot
+
+service fuse_usbotg /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/usbotg /storage/usbotg
+    class late_start
+    disabled
+
+service fuse_sdcard1 /system/bin/sdcard -u 1023 -g 1023 -w 1023 -d /mnt/media_rw/sdcard1 /storage/sdcard1
+    class late_start
+    disabled
+#
+# Connectivity related services (Begin)
+#
+
+service ping_logger /system/etc/ping_logger.sh
+    disabled
+    oneshot
+    user root
+
+on property:debug.ping.logging=*
+    start ping_logger
+
+# wifi_log_levels metrics service
+service wifi_log_levels /system/etc/wifi_log_levels.sh
+    class late_start
+    user root
+    group root
+
+service thermal_log /system/bin/thermal_log.sh
+        class late_start
+        user system
+        group system
+        oneshot
+        disabled
+
+service thermal_qa /system/bin/ThermalBenchmarkAutomation.sh
+       class late_start
+       user root
+       group root
+       oneshot
+       disabled
+
+service temperature_log /system/bin/temperature_log.sh
+	class main
+	user root
+	group system
+	oneshot
+	disabled
+
+service dmesg_log /system/bin/dmesg_log.sh
+	class main
+	user root
+	group system
+	oneshot
+	disabled
+
+service logcat_log /system/bin/logcat_log.sh
+	class main
+	user root
+	group system
+	oneshot
+	disabled
+
+service amzn_drmprov /system/bin/amzn_drmprov_check
+	class main
+	user root
+	group system
+	oneshot
+
+service drmkey_backup /system/bin/amzn_drmprov_tool --backup
+	class main
+	user root
+	group system
+	oneshot
+	disabled
+
+on property:sys.amzn_drm.need_backup=1
+	start drmkey_backup
+
+# print boot reason
+on property:sys.boot_completed=1
+    write /sys/kernel/mm/ksm/pages_to_scan 100
+    write /sys/kernel/mm/ksm/sleep_millisecs 700
+    write /sys/kernel/mm/ksm/run 1
+    start bootinfo
+
+on property:debug.log.thermal_qa.enable=y
+	start thermal_qa
+
+on property:vold.decrypt=trigger_restart_framework
+	start dmesg_log
+
+
+on property:debug.log.temperature.enable=y
+	start temperature_log
+
+on property:debug.log.dmesg.enable=y
+	start dmesg_log
+
+on property:debug.log.logcat.enable=y
+	start logcat_log
+
+#
+# Turn on/off UART kernel log
+#
+on property:persist.sys.uart.klog.enable=y
+	write /sys/mtuart/conse 1
+on property:persist.sys.uart.klog.enable=n
+	write /sys/mtuart/conse 0
+
+#
+# Connectivity related services (End)
+#
+
+service bootinfo /system/bin/PrintBootInfo
+	disabled
+	oneshot
+
+service rpmb_svc /system/bin/rpmb_svc
+	class main
+	user root
+	group root
+	disabled
+
+on property:ro.boot.rpmb_state=1
+	start rpmb_svc
+
+service hdmi /system/bin/hdmi
+	class main
+	user system
+	group system net_admin inet
+
+service btremoted /system/bin/btremoted
+    class late_start
+    user root
+    group root
+
+on property:wlan.interface.p2p.group=*
+    exec /system/bin/rmmod ozwpan
+    insmod /system/lib/modules/ozwpan.ko g_net_dev=${wlan.interface.p2p.group}
+    start ozwpan
+
+service ozwpan /system/bin/sh ozwpan.sh
+    class late_start
+    user root
+    group root
+    oneshot
+
+#syseng services
+service syseng /system/etc/syseng.sh
+    disabled
+    user root
+    group system
+
+# query USB charge port type service
+service usb_cp_type /system/bin/sh /system/bin/lab126_usb_charge_port_type.sh
+    disabled
+    user root
+    oneshot
+
+# start adb script after boot complete, so it's after the framework made changes
+on property:sys.boot_completed=1
+    start adb_usb
+
+service adb_usb /system/bin/sh /system/bin/adb_usb.sh
+    class late_start
+    disabled
+    user root
+    oneshot

@@ -1,0 +1,11 @@
+import init.fulldump.rc
+
+on charger
+    mount ext4 /dev/block/platform/mtk-msdc.0/by-name/system /system ro wait
+    start kpoc_charger
+
+service kpoc_charger /system/bin/kpoc_charger
+    user root
+    group root
+    class charger
+

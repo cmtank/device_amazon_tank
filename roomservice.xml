@@ -3,6 +3,7 @@
 
   <project name="cmtank/device_amazon_tank" path="device/amazon/tank" remote="github" revision="cm-12.1" />
   <project name="cmtank/vendor_amazon_tank" path="vendor/amazon/tank" remote="github" revision="cm-12.1" />
+  <project name="cmtank/android_kernel_amazon_mt8127" path="kernel/amazon/mt8127" remote="github" revision="cm-12.1" />
 
   <project name="LineageOS/android_hardware_broadcom_wlan" path="hardware/broadcom/wlan" remote="github" revision="cm-12.1" />
 

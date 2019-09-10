@@ -106,8 +106,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_minimal.mk)
 
 ######## tank
 
+# Ramdisk
 PRODUCT_COPY_FILES += \
-        device/amazon/tank/boot.img:kernel
+    $(call find-copy-subdir-files,*,device/amazon/tank/rootdir,root)
+
+#PRODUCT_COPY_FILES += \
+#        device/amazon/tank/boot.img:kernel
 
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)

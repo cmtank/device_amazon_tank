@@ -1,0 +1,3 @@
+# This is for preloader update
+on fs
+    write /sys/block/mmcblk0boot0/force_ro 0

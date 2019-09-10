@@ -27,16 +27,36 @@ TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_SMP := true
 
 # Kernel Config
+#BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x04000000 --tags_offset 0x00000100
+#BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive
+#BOARD_KERNEL_BASE := 0x80000000
+#BOARD_KERNEL_PAGESIZE := 4096
+#BOARD_PAGE_SIZE := 0x800
+
+
+# Kernel
+BOARD_CUSTOM_BOOTIMG_MK := device/amazon/tank/mkbootimg.mk
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x04000000 --tags_offset 0x00000100
-BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive
+TARGET_KERNEL_CONFIG := tank_defconfig
+TARGET_KERNEL_SOURCE := kernel/amazon/mt8127
 BOARD_KERNEL_BASE := 0x80000000
-BOARD_KERNEL_PAGESIZE := 4096
-BOARD_PAGE_SIZE := 0x800
+BOARD_KERNEL_TAGS_OFFSET := 0x00000100
+BOARD_KERNEL_PAGESIZE := 2048
+BOARD_RAMDISK_OFFSET := 0x04000000
+BOARD_SECOND_OFFSET := 0x00f00000
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-eabi-
+
+
+BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive
+#BOARD_KERNEL_CMDLINE := androidboot.console=ttyMSM0 androidboot.hardware=qcom
+#BOARD_KERNEL_CMDLINE += user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3
+#BOARD_KERNEL_CMDLINE += service_locator.enable=1
+#BOARD_KERNEL_CMDLINE += swiotlb=2048
 
 BOARD_HAS_MTK_HARDWARE := true
 MTK_HARDWARE := true
 
-TARGET_PREBUILT_KERNEL := device/amazon/tank/boot.img
+#TARGET_PREBUILT_KERNEL := device/amazon/tank/boot.img
 
 # Flags
 TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
@@ -73,6 +93,9 @@ TARGET_USES_ION := true
 TARGET_DISPLAY_USE_RETIRE_FENCE := true
 MAX_EGL_CACHE_KEY_SIZE := 12*1024
 MAX_EGL_CACHE_SIZE := 1024*1024
+
+TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
+TARGET_HAS_WAITFORVSYNC := true
 
 # Surfaceflinger optimization for VD surfaces
 TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
