@@ -17,8 +17,8 @@ PRODUCT_BRAND := google
 PRODUCT_MODEL := tank
 PRODUCT_MANUFACTURER := amzn
 
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="full_tank-user 5.1.1 LVY48F 288.6.3.9_user_639566220 release-keys"
 
-BUILD_FINGERPRINT := Amazon/full_tank/tank:5.1.1/LVY48F/288.6.3.9_user_639566220:user/release-keys
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    BUILD_FINGERPRINT=google/fugu/fugu:5.1.1/LMY47V/1836172:user/release-keys \
+    PRIVATE_BUILD_DESC="fugu-user 5.1.1 LMY47V 1836172 release-keys"
 
