@@ -121,9 +121,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 # Device overlay
 DEVICE_PACKAGE_OVERLAYS += device/amazon/tank/overlay
 
-#init.d script
-PRODUCT_COPY_FILES += device/amazon/tank/init.d/init.fosflags.sh:system/etc/init.fosflags.sh
-
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/tablet_core_hardware.xml:system/etc/permissions/tablet_core_hardware.xml \
