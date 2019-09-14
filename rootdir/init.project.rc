@@ -7,11 +7,6 @@ on init
     mount tmpfs tmpfs /tmp
     chmod 1775 /tmp
 
-##ACOS_MOD_BEGIN {amazon_logd}
-    mkdir /dev/logd 0770 logd log
-    mount tmpfs tmpfs /dev/logd mode=0770,uid=1036,gid=1036,size=512K,context=u:object_r:logd_tmpfs:s0
-##ACOS_MOD_END {amazon_logd}
-
 on post-fs
     # Turn on swap
     swapon_all /fstab.mt8127
@@ -20,19 +15,6 @@ on post-fs
     write /proc/sys/vm/page-cluster 0
 
 on post-fs-data
-
-    #OOBE
-    mkdir /data/securedStorageLocation 0770 system amz_group
-    mkdir /data/securedStorageLocation/com.amazon.tv.oobe 0770 system amz_group
-    mkdir /data/securedStorageLocation/com.amazon.tv.oobe/videos 0770 system amz_group
-    chmod 0660 /data/securedStorageLocation/com.amazon.tv.oobe/videos/ATVPDKIKX0DER_welcome_video.mp4
-    chmod 0660 /data/securedStorageLocation/com.amazon.tv.oobe/videos/A1PA6795UKMFR9_welcome_video.mp4
-    chmod 0660 /data/securedStorageLocation/com.amazon.tv.oobe/videos/A1F83G8C2ARO7P_welcome_video.mp4
-    chmod 0660 /data/securedStorageLocation/com.amazon.tv.oobe/videos/A1VC38T7YXB528_welcome_video.mp4
-    chown system amz_group /data/securedStorageLocation/com.amazon.tv.oobe/videos/ATVPDKIKX0DER_welcome_video.mp4
-    chown system amz_group /data/securedStorageLocation/com.amazon.tv.oobe/videos/A1PA6795UKMFR9_welcome_video.mp4
-    chown system amz_group /data/securedStorageLocation/com.amazon.tv.oobe/videos/A1F83G8C2ARO7P_welcome_video.mp4
-    chown system amz_group /data/securedStorageLocation/com.amazon.tv.oobe/videos/A1VC38T7YXB528_welcome_video.mp4
 
     # For enabling adb for the first boot
     mkdir /data/hwval 0770 system system
