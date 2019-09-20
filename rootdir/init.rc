@@ -304,6 +304,9 @@ on post-fs-data
     chown system system /data/resource-cache
     chmod 0771 /data/resource-cache
 
+    # directory for debugging daemons to put thermal and battery data
+    mkdir /data/debug_service 0771 system system
+
     # create the lost+found directories, so as to enforce our permissions
     mkdir /data/lost+found 0770 root root
 
@@ -585,7 +588,7 @@ service drm /system/bin/drmserver
 service media /system/bin/mediaserver
     class main
     user media
-    group audio camera inet net_bt net_bt_admin net_bw_acct drmrpc mediadrm qcom_diag media
+    group audio camera inet net_bt net_bt_admin net_bw_acct drmrpc mediadrm drm qcom_diag media
     ioprio rt 4
 
 # One shot invocation to deal with encrypted volume.
