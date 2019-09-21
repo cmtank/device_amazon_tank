@@ -239,3 +239,5 @@ vendor/smartvolume/tank/wired_headset.csv
 xbin/trapz
 xbin/wl
 
+vendor/app/Ds/Ds.apk
+

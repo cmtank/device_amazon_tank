@@ -83,8 +83,7 @@ PRODUCT_PACKAGES += \
     tv_input.default \
     LeanbackLauncher \
     LeanbackIme \
-    Overscan \
-    Ds
+    Overscan
 
 # Enable frame-exact AV sync
 PRODUCT_PROPERTY_OVERRIDES += \
