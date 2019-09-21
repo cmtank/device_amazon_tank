@@ -204,6 +204,7 @@ vendor/data/ttp/tecla-2013.rsa
 vendor/data/ttp/tecla-2014.rsa
 vendor/data/ttp/viber-voip.rsa
 vendor/etc/audio_effects.conf
+vendor/etc/dolby/ds-default.xml
 vendor/firmware/BCM43569A2_001.003.004.0148.0000.hcd
 vendor/firmware/brcm/bcm43569a2-firmware.bin
 vendor/firmware/brcm/bcm43569a2-firmware-test.bin
@@ -237,3 +238,4 @@ vendor/smartvolume/tank/wired_headphone.csv
 vendor/smartvolume/tank/wired_headset.csv
 xbin/trapz
 xbin/wl
+
