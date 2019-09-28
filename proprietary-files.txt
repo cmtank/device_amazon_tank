@@ -82,7 +82,6 @@ lib/libaudiosetting.so
 lib/libaudiospdif.so
 lib/libaudiostream_jni.so
 lib/libaudiostream.so
-lib/libaudioutils.so
 lib/libbessound_hd_mtk.so
 lib/libbessound_mtk.so
 lib/libblisrc32.so
