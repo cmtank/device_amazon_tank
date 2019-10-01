@@ -208,16 +208,9 @@ on fs
     #mount yaffs2 mtd@cache /cache nosuid nodev
     #write /proc/bootprof "INIT:NAND:Mount_END"
 
-#on fs_property:ro.mount.fs=EXT4
     write /proc/bootprof "INIT:eMMC:Mount_START"
-    mount ext4 /dev/block/platform/mtk-msdc.0/by-name/system /system noatime wait ro commit=1,nodelalloc,discard,errors=panic
-    exec /system/bin/ext4_resize
     mount_all /fstab.mt8127
     write /proc/bootprof "INIT:eMMC:Mount_END"
-    mount iso9660 loop@/system/etc/iAmCdRom.iso /mnt/cd-rom ro
-    
-    #change partition permission
-    exec /system/etc/partition_permission.sh
     
 # RGX init
 service pvrsrvctl /system/vendor/bin/pvrsrvctl --start 
