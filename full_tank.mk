@@ -176,7 +176,8 @@ PRODUCT_PACKAGES += \
 
 # Shims 
 PRODUCT_PACKAGES += \
-    libshim_asp
+    libshim_asp \
+    libshim_thermald
 
 # call dalvik heap config
 $(call inherit-product, frameworks/native/build/tablet-7in-hdpi-1024-dalvik-heap.mk)
