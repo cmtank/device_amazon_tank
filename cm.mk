@@ -19,6 +19,5 @@ PRODUCT_MANUFACTURER := amzn
 
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_FINGERPRINT=google/fugu/fugu:5.1.1/LMY47V/1836172:user/release-keys \
-    PRIVATE_BUILD_DESC="fugu-user 5.1.1 LMY47V 1836172 release-keys"
-
+    BUILD_FINGERPRINT=SHARP/an_np40/an_np40:5.1/LMY47M/20180306:user/release-keys \
+    PRIVATE_BUILD_DESC="an_np40-user 5.1 LMY47M 20180306 release-keys"
