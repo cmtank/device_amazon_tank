@@ -25,6 +25,8 @@ TARGET_ARCH_VARIANT_CPU := cortex-a15
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_SMP := true
+ARCH_ARM_HAVE_TLS_REGISTER := true
+ARCH_ARM_HAVE_NEON := true
 
 # Kernel Config
 #BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x04000000 --tags_offset 0x00000100
@@ -36,18 +38,16 @@ TARGET_CPU_SMP := true
 
 # Kernel
 BOARD_CUSTOM_BOOTIMG_MK := device/amazon/tank/mkbootimg.mk
-BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x04000000 --tags_offset 0x00000100
-TARGET_KERNEL_CONFIG := tank_defconfig
-TARGET_KERNEL_SOURCE := kernel/amazon/mt8127
 BOARD_KERNEL_BASE := 0x80000000
-BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_RAMDISK_OFFSET := 0x04000000
-BOARD_SECOND_OFFSET := 0x00f00000
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-eabi-
-
-
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
 BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive
+BOARD_MKBOOTIMG_ARGS := --cmdline "$(BOARD_KERNEL_CMDLINE)" --base 0x80000000 --pagesize 2048 --kernel_offset 0x00008000 --ramdisk_offset 0x04000000 --tags_offset 0x00000100 --second_offset 0x00f00000
+
+# Kernel Config
+TARGET_KERNEL_SOURCE := kernel/amazon/mt8127
+TARGET_KERNEL_CONFIG := tank_defconfig
+
 #BOARD_KERNEL_CMDLINE := androidboot.console=ttyMSM0 androidboot.hardware=qcom
 #BOARD_KERNEL_CMDLINE += user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3
 #BOARD_KERNEL_CMDLINE += service_locator.enable=1
@@ -56,6 +56,7 @@ BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive
 BOARD_HAS_MTK_HARDWARE := true
 MTK_HARDWARE := true
 
+
 #TARGET_PREBUILT_KERNEL := device/amazon/tank/boot.img
 
 # Flags
@@ -63,7 +64,7 @@ TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -DMTK_HARDWARE -mfpu=neon -mfloat-abi=softfp
 BOARD_GLOBAL_CFLAGS += -DMTK_HARDWARE -DREFRESH_RATE=60
 BOARD_GLOBAL_CFLAGS += -DAMAZON_LOG -DADD_LEGACY_ACQUIRE_BUFFER_SYMBOL
-BOARD_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
+BOARD_NO_SECURE_DISCARD := true
 
 # Wifi defines
 WPA_SUPPLICANT_VERSION      := VER_0_8_X
