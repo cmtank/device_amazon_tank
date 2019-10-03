@@ -160,7 +160,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
         audio.a2dp.default \
         libtinycompress \
-	libaudioutils
+	libaudioutils \
+	libalsautils \
+	libtinyalsa \
+	libaudiospdif 
 
 # Bluetooth
 PRODUCT_PACKAGES += \

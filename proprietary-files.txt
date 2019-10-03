@@ -79,7 +79,6 @@ lib/libaudiopolicyservice.so
 lib/libaudio-resampler.so
 lib/libaudioresampler.so
 lib/libaudiosetting.so
-lib/libaudiospdif.so
 lib/libaudiostream_jni.so
 lib/libaudiostream.so
 lib/libbessound_hd_mtk.so
@@ -160,7 +159,6 @@ lib/libspeech_enh_lib.so
 lib/libstagefrighthw.so
 lib/libSwJpgCodec.so
 lib/libthermalservice.so
-lib/libtinyalsa.so
 lib/libtinyxml.so
 lib/libtoe.so
 lib/libtrapz.so
