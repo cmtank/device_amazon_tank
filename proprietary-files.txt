@@ -181,7 +181,6 @@ lib/libwlfAmzn.so
 lib/libwlm.so
 lib/libwpa_client.so
 lib/modules/bcmdhd.ko
-lib/modules/ozwpan.ko
 lib/soundfx/libaudiopreprocessing.so
 lib/soundfx/libbundlewrapper.so
 lib/soundfx/libdownmix.so
