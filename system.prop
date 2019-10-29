@@ -175,4 +175,8 @@ dalvik.vm.isa.arm.features=div
 net.bt.name=Android
 dalvik.vm.stack-trace-file=/data/anr/traces.txt
 
+wlan.interface.p2p.group=p2p-wlan0-0
+persist.sys.p2p.go.chnl=5180
+
+
 
