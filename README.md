@@ -12,4 +12,4 @@ Storage | 8 GB
 
 ![Fire TV Stick 2](https://i.blogs.es/7b5a8c/firetvstickbasic/450_1000.jpg "Fire TV Stick 2")
 
-This branch is for building LineageOS 12.1/CM12.1
+This branch is for building LineageOS 14.1/CM14.1
