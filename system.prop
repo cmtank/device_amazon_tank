@@ -124,6 +124,9 @@ dalvik.vm.skpheapminfree=128k
 dalvik.vm.skpheapstartsize=2m
 dalvik.vm.skpheaptargetutil=0.95
 
+# OTG
+persist.sys.isUsbOtgEnabled=true
+
 #
 # ADDITIONAL_BUILD_PROPERTIES
 #
