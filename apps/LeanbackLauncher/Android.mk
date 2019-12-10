@@ -39,7 +39,6 @@ LOCAL_OVERRIDES_PACKAGES := \
 	TelephonyProvider \
 	TeleService \
 	ThemeChooser \
-	ThemesProvider \
 	Trebuchet \
 	VisualizationWallpapers \
 	WallpaperCropper
