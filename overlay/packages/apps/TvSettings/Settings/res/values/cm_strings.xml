@@ -12,5 +12,5 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-<string name="accessories_add_bluetooth_inst_cm">To start using LineageOS make sure your Bluetooth device is in pairing mode. For Amazon Fire TV Remote this is done by pressing home 10 seconds or more.</string>
+<string name="accessories_add_bluetooth_inst_cm">Put your device in pairing mode. For Amazon Fire TV Remote press home 10 seconds or more, for Amazon Fire TV Remote with Alexa press home until the remote gets paired.</string>
 </resources>
