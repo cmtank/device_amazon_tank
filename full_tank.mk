@@ -16,6 +16,10 @@ PRODUCT_AAPT_PREF_CONFIG := xhdpi
 -include external/svox/pico/lang/PicoLangFrFrInSystem.mk
 -include external/svox/pico/lang/PicoLangItItInSystem.mk
 
+# CMLeanbackCustomizer
+PRODUCT_PACKAGES += \
+    CMLeanbackCustomizer
+
 # From build/target/product/core_base.mk
 PRODUCT_PACKAGES += \
     ContactsProvider \
