@@ -54,6 +54,7 @@ lib/hw/audio.primary.mt8127.so
 lib/hw/audio.r_submix.default.so
 lib/hw/audio.sco.mt8127.so
 lib/hw/audio.usb.default.so
+lib/hw/gralloc.default.so
 lib/hw/gralloc.mt8127.so
 lib/hw/hdmi_cec.default.so
 lib/hw/hwcomposer.mt8127.so
@@ -138,7 +139,6 @@ lib/libmtk_drvb.so
 lib/libmtkjpeg.so
 lib/libmtklimiter.so
 lib/libmtk_mali_user.so
-lib/libmtk_mali_user.so
 lib/libMtkOmxAIVPlayer.so
 lib/libMtkOmxCore.so
 lib/libMtkOmxMp3Dec.so
@@ -159,7 +159,6 @@ lib/libsoundtriggerservice.so
 lib/libsoundtrigger.so
 lib/libspeech_enh_lib.so
 lib/libstagefrighthw.so
-lib/libstagefright_omx.so
 lib/libSwJpgCodec.so
 lib/libthermalservice.so
 lib/libtinyalsa.so
@@ -167,6 +166,7 @@ lib/libtinyxml.so
 lib/libtoe.so
 lib/libtrapz.so
 lib/libtz_uree.so
+lib/liburee_fps.so
 lib/liburee_meta_drmkeyinstall_v2.so
 lib/lib_uree_mtk_crypto.so
 lib/lib_uree_mtk_modular_drm.so

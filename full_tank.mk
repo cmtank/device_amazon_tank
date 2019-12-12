@@ -33,27 +33,41 @@ PRODUCT_PACKAGES += \
     libfilterpack_imageproc \
     libgabi++ \
     libkeystore \
-    libstagefright_soft_aacdec \
-    libstagefright_soft_aacenc \
-    libstagefright_soft_amrdec \
-    libstagefright_soft_amrnbenc \
-    libstagefright_soft_amrwbenc \
-    libstagefright_soft_flacenc \
-    libstagefright_soft_g711dec \
-    libstagefright_soft_gsmdec \
-    libstagefright_soft_h264dec \
-    libstagefright_soft_h264enc \
-    libstagefright_soft_hevcdec \
-    libstagefright_soft_mp3dec \
-    libstagefright_soft_mpeg4dec \
-    libstagefright_soft_mpeg4enc \
-    libstagefright_soft_opusdec \
-    libstagefright_soft_rawdec \
-    libstagefright_soft_vorbisdec \
-    libstagefright_soft_vpxdec \
-    libstagefright_soft_vpxenc \
     mdnsd \
     requestsync
+
+# stagefright
+PRODUCT_PACKAGES += \
+    libstagefright.so \
+    libstagefright_amrnb_common.so \
+    libstagefright_avc_common.so \
+    libstagefright_enc_common.so \
+    libstagefright_foundation.so \
+    libstagefright_hdcprx.so \
+    libstagefright_http_support.so \
+    libstagefright_httplive.so \
+    libstagefright_omx.so \
+    libstagefright_soft_aacdec.so \
+    libstagefright_soft_aacenc.so \
+    libstagefright_soft_amrdec.so \
+    libstagefright_soft_amrnbenc.so \
+    libstagefright_soft_amrwbenc.so \
+    libstagefright_soft_flacenc.so \
+    libstagefright_soft_g711dec.so \
+    libstagefright_soft_gsmdec.so \
+    libstagefright_soft_h264dec.so \
+    libstagefright_soft_h264enc.so \
+    libstagefright_soft_hevcdec.so \
+    libstagefright_soft_mp3dec.so \
+    libstagefright_soft_mpeg4dec.so \
+    libstagefright_soft_mpeg4enc.so \
+    libstagefright_soft_opusdec.so \
+    libstagefright_soft_rawdec.so \
+    libstagefright_soft_vorbisdec.so \
+    libstagefright_soft_vpxdec.so \
+    libstagefright_soft_vpxenc.so \
+    libstagefright_wfd.so \
+    libstagefright_yuv.so
 
 # From build/target/product/core.mk
 PRODUCT_PACKAGES += \
