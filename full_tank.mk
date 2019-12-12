@@ -20,6 +20,10 @@ PRODUCT_AAPT_PREF_CONFIG := xhdpi
 PRODUCT_PACKAGES += \
     CMLeanbackCustomizer
 
+# Amazon btremoted
+PRODUCT_PACKAGES += \
+    btremoted
+
 # From build/target/product/core_base.mk
 PRODUCT_PACKAGES += \
     ContactsProvider \
