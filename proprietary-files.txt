@@ -61,7 +61,7 @@ lib/hw/keystore.default.so
 lib/hw/keystore.mt8127.so
 lib/hw/local_time.default.so
 lib/hw/memtrack.mt8127.so
-lib/hw/perfboost.mt8127.so
+#lib/hw/perfboost.mt8127.so
 lib/hw/thermal.mt8127.so
 lib/hw/tv_input.default.so
 lib/lib3a.so
@@ -159,6 +159,7 @@ lib/libsoundtriggerservice.so
 lib/libsoundtrigger.so
 lib/libspeech_enh_lib.so
 lib/libstagefrighthw.so
+lib/libstagefright_omx.so
 lib/libSwJpgCodec.so
 lib/libthermalservice.so
 lib/libtinyalsa.so
@@ -205,7 +206,7 @@ vendor/data/ttp/tecla-2014.rsa
 vendor/data/ttp/viber-voip.rsa
 vendor/etc/audio_effects.conf
 vendor/etc/dolby/ds-default.xml
-vendor/firmware/BCM43569A2_001.003.004.0148.0000.hcd
+vendor/firmware/BCM43569A2_001.003.004.0172.0000_Generic_UART_40MHz_fcbga_BU_AmazonTank.hcd
 vendor/firmware/brcm/bcm43569a2-firmware.bin
 vendor/firmware/brcm/bcm43569a2-firmware-test.bin
 vendor/firmware/brcm/bcm43569a2.nvm
@@ -239,5 +240,5 @@ vendor/smartvolume/tank/wired_headset.csv
 xbin/trapz
 xbin/wl
 
-vendor/app/Ds/Ds.apk
+#vendor/app/Ds/Ds.apk
 
