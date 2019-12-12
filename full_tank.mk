@@ -2,7 +2,7 @@
 
 PRODUCT_IS_ATV_SDK := true
 
-PRODUCT_CHARACTERISTICS := tv
+PRODUCT_CHARACTERISTICS := tv,nosdcard
 
 # Include drawables for various densities.
 PRODUCT_AAPT_CONFIG := normal large xlarge tvdpi hdpi xhdpi xxhdpi
