@@ -176,7 +176,6 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-        audio.a2dp.default \
         libtinycompress
 
 # Bluetooth
