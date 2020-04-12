@@ -12,13 +12,11 @@
     <!-- DO NOT TRANSLATE -->
     <string-array name="home_screen_row_ordering" translatable="false">
         <item>apps_row</item>
-        <item>partner_row</item>
         <item>games_row</item>
         <item>inputs_row</item>
         <item>settings_row</item>
     </string-array>
 
-    <item type="drawable" name="partner_row_icon">@drawable/ic_title_custom</item>
     <item type="drawable" name="apps_row_icon">@drawable/ic_title_apps</item>
     <item type="drawable" name="games_row_icon">@drawable/ic_title_games</item>
     <item type="drawable" name="inputs_row_icon">@drawable/ic_title_custom</item>
