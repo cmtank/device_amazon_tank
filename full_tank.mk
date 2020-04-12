@@ -98,7 +98,7 @@ PRODUCT_PACKAGES += \
     local_time.default \
     screenrecord   
 
-#TV
+# TV
 PRODUCT_PACKAGES += \
     TvProvider \
     TvSettings \
@@ -180,17 +180,17 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-        libtinycompress
+    libtinycompress
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-        bluetooth.default
+    bluetooth.default
 
 # Power
 PRODUCT_PACKAGES += \
-        power.default
+    power.default
 
-# network
+# Network
 PRODUCT_PACKAGES += \
     netd
 
@@ -198,6 +198,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     ebtables \
     ethertypes
+
+# RemovePackages
+PRODUCT_PACKAGES += \
+    RemovePackages
 
 # Shims 
 PRODUCT_PACKAGES += \
