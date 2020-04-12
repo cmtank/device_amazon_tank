@@ -1,7 +1,7 @@
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
-LOCAL_SRC_FILES := asp.c
+LOCAL_SRC_FILES := asp_shim.cpp
 LOCAL_SHARED_LIBRARIES := liblog
 LOCAL_MODULE := libshim_asp
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
