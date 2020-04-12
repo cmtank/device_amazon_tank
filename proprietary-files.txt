@@ -241,9 +241,6 @@ vendor/smartvolume/tank/wired_headphone.csv
 vendor/smartvolume/tank/wired_headset.csv
 xbin/trapz
 xbin/wl
-
-#vendor/app/Ds/Ds.apk:
-
 usr/keylayout/Vendor_1949_Product_0401.kl
 usr/keylayout/Vendor_1949_Product_0404.kl
 usr/keylayout/Vendor_1949_Product_0407.kl

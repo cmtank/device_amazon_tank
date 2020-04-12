@@ -1,28 +1,27 @@
-#ADB on recovery
+# Enable ADB
 service.adb.root=1
 persist.service.adb.enable=1                                                    
 persist.service.debuggable=1
 persist.sys.usb.config=mtp,adb
 
-# no RIL
+# No RIL
 keyguard.no_require_sim=1
 ro.radio.use-ppp=no
 ro.config.nocheckin=yes
 ro.radio.noril=1
 ro.carrier=wifi-only
 persist.radio.noril=1
+ro.carrier=unknown
 
-# system.prop for generic sdk
-
+# LCD Density
 ro.sf.lcd_density=320
 
-#support opengles 2.0 3.0 is 196608
+# Support opengles 2.0 3.0 is 196608
 ro.opengles.version=131072
 
+# Audio
 ro.audio.silent=0
-#ACOS_MOD_BEGIN {amazon_audio}
 media.aac_51_output_enabled=true
-#ACOS_MOD_END {amazon_audio}
 
 # MTK, Infinity, 20090720 {
 wifi.interface=wlan0
@@ -43,9 +42,15 @@ mediatek.wlan.ctia=0
 wifi.tethering.interface=ap0
 #
 
+# P2P
 wifi.direct.interface=p2p0
+wlan.interface.p2p.group=p2p-wlan0-0
+persist.sys.p2p.go.chnl=5180
 
+# LOG
 log.tag.ControllerManagerLogs=DEBUG
+ro.logd.size.vitals=128000
+ro.logd.size.metrics=128000
 
 # Switching Menu of Mass storage and MTP
 ro.sys.usb.storage.type=mtp,mass_storage
@@ -56,38 +61,38 @@ ro.sys.usb.bicr=yes
 # USB Charge only function
 ro.sys.usb.charging.only=yes
 
-#smartvolume
+# SmartVolume
 ro.smartvolume.config=/system/vendor/smartvolume/tank/
-ro.config.notification_sound=Verso.ogg
 
+# Screen
 persist.panel.orientation=0
+ro.sf.hwrotation=0
 
-# maximum backup size for factory reset whitelist in kB
+# Maximum backup size for factory reset whitelist in kB
 ro.recovery.wl.maxstore=524288
 
-#uart kernel log
-persist.sys.uart.klog.enable=n
+# UART kernel log
+persist.sys.uart.klog.enable=y
 
-# wifi rssi->bar thresholds
+# Wifi rssi->bar thresholds
 persist.wifi.rssi.thresholds=-86,-79,-68,-62
 
 # Audio Rotation
 ro.audio.monitorRotation=true
 
-#add for 8127 stick as cec playback device type
+# CEC
 ro.hdmi.device_type=4
 
-# btremoted control properties
+# Bluetooth Remote Control
 btremoted.decode.enabled=1
 btremoted.plc.enabled=1
 btremoted.trim_length=40
 btremoted.socket=btsco_audiohal
-#debug.ignore.search_intent=true
 
 # Netflix
 ro.nrdp.modelgroup=FIRETVSTICK2016
 
-#resolution setting is AUTO (1 | 0) == (true | false)
+# Resolution setting is AUTO (1 | 0) == (true | false)
 persist.sys.resolution.auto=1
 
 # Performance - Disable dirty region for Mali which improves fluidity
@@ -124,62 +129,29 @@ dalvik.vm.skpheapminfree=128k
 dalvik.vm.skpheapstartsize=2m
 dalvik.vm.skpheaptargetutil=0.95
 
-# OTG
-persist.sys.isUsbOtgEnabled=true
-
-#
-# ADDITIONAL_BUILD_PROPERTIES
-#
-ro.com.android.dateformat=MM-dd-yyyy
-ro.config.ringtone=Ring_Synth_04.ogg
-ro.config.notification_sound=Verso.ogg
-ro.carrier=unknown
-ro.config.alarm_alert=Alarm_Classic.ogg
-ro.build.lab126.buildtype=Nightly
-ro.build.lab126.project=full_tank_ship_5268
-ro.build.lab126.build=5086
-drm.service.enabled=true
-mtk_in_house_tee_support=true
-ro.mediatek.platform=MT8127
-persist.radio.combo.chipid=-1
-ro.btstack=default
-dalvik.vm.heapstartsize=5m
-dalvik.vm.heapgrowthlimit=96m
-dalvik.vm.heapsize=256m
-dalvik.vm.heaptargetutilization=0.75
-dalvik.vm.heapminfree=512k
-dalvik.vm.heapmaxfree=2m
-ro.mediatek.chip_ver=S01
-ro.mediatek.version.release=ALPS.W10.24.p0
-debug.log.base.path=/data/debug_service
-debug.log.battery.enable=n
-debug.log.battery.sleep=60
-debug.log.temperature.enable=n
-debug.log.temperature.sleep=10
-debug.log.thermal_qa.enable=n
-debug.log.dmesg.enable=n
-debug.log.dmesg.wakeup=0
-debug.log.logcat.enable=n
-debug.log.coredump.enable=n
+# Wireless Display
 persist.debug.wfd.enable=1
 ro.mtk_wfd_support=1
 ro.mtk_wfd_sink_support=1
 ro.mtk_wfd_hdcp_rx_support=1
-ro.sf.hwrotation=0
-ro.smartvolume.config=/system/vendor/smartvolume/tank/
-persist.sys.dalvik.vm.lib.2=libart.so
-persist.sys.recovery.batt_level=0
-ro.amazon.fosflags=1
-persist.sys.ota.verified=unverified
-persist.sys.last_verified_build=none
-ro.logd.size.vitals=128000
-ro.logd.size.metrics=128000
-dalvik.vm.isa.arm.features=div
-net.bt.name=Android
-dalvik.vm.stack-trace-file=/data/anr/traces.txt
 
-wlan.interface.p2p.group=p2p-wlan0-0
-persist.sys.p2p.go.chnl=5180
+# MediaTek chip info
+ro.mediatek.chip_ver=S01
+ro.mediatek.version.release=ALPS.W10.24.p0
+ro.mediatek.platform=MT8127
+
+# MediaTek in house TEE
+mtk_in_house_tee_support=true
+
+# DRM
+drm.service.enabled=true
+
+# Radio
+persist.radio.combo.chipid=-1
+
+# OTG
+persist.sys.isUsbOtgEnabled=true
+
 
 
 

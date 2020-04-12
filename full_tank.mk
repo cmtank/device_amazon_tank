@@ -1,7 +1,5 @@
-### Android TV
-
+# ATV
 PRODUCT_IS_ATV_SDK := true
-
 PRODUCT_CHARACTERISTICS := tv,nosdcard
 
 # Include drawables for various densities.
@@ -125,15 +123,9 @@ $(call inherit-product-if-exists, frameworks/base/data/keyboards/keyboards.mk)
 $(call inherit-product-if-exists, frameworks/webview/chromium/chromium.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_minimal.mk)
 
-
-######## tank
-
 # Ramdisk
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,device/amazon/tank/rootdir,root)
-
-#PRODUCT_COPY_FILES += \
-#        device/amazon/tank/boot.img:kernel
 
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
@@ -207,10 +199,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libshim_asp
 
-# call dalvik heap config
+# Call dalvik heap config
 $(call inherit-product, frameworks/native/build/tablet-7in-hdpi-1024-dalvik-heap.mk)
 
-# call hwui memory config
+# Call hwui memory config
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
 
 # Get non-open-source specific aspects
