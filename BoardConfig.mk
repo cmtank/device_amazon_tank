@@ -25,15 +25,10 @@ TARGET_CPU_SMP := true
 
 # Kernel
 BOARD_CUSTOM_BOOTIMG_MK := device/amazon/tank/mkbootimg.mk
-BOARD_MKBOOTIMG_ARGS := --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
-BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,32N2 androidboot.selinux=permissive
+BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x04000000 --second_offset 0x00f00000 --tags_offset 0x00000100 --base 0x80000000 --cmdline "bootopt=64S3,32N2,32N2 androidboot.selinux=permissive"
 TARGET_KERNEL_CONFIG := tank_defconfig
 TARGET_KERNEL_SOURCE := kernel/amazon/mt8127
-BOARD_KERNEL_BASE := 0x80000000
-BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_RAMDISK_OFFSET := 0x04000000
-BOARD_SECOND_OFFSET := 0x00f00000
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-eabi-
 
 # MediaTek Flags
