@@ -161,7 +161,9 @@ PRODUCT_COPY_FILES += \
 
 # Keylayout
 PRODUCT_COPY_FILES += \
-    device/amazon/tank/keylayouts/Generic.kl:system/usr/keylayout/Generic.kl
+    $(LOCAL_PATH)/keylayouts/Generic.kl:system/usr/keylayout/Generic.kl \
+    $(LOCAL_PATH)/keylayouts/qwerty.kl:system/usr/keylayout/qwerty.kl
+    
 
 # Thermal
 PRODUCT_COPY_FILES += \
