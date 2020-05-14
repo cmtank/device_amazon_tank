@@ -257,3 +257,6 @@ usr/keylayout/Vendor_0171_Product_0413.kl
 usr/keylayout/Vendor_0171_Product_0419.kl
 usr/keylayout/Vendor_045e_Product_0291.kl
 
+vendor/lib/libFPS.so
+vendor/lib/libTAFps.so
+
