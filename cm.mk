@@ -17,5 +17,6 @@ PRODUCT_MANUFACTURER := amzn
 
 # Override the fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_FINGERPRINT=SHARP/an_np40/an_np40:5.1/LMY47M/20180306:user/release-keys \
-    PRIVATE_BUILD_DESC="an_np40-user 5.1 LMY47M 20180306 release-keys"
+    BUILD_FINGERPRINT=Amazon/full_tank/tank:5.1.1/LVY48F/288.6.4.8_user_648595120:user/release-keys \
+    PRIVATE_BUILD_DESC="full_tank-user 5.1.1 LVY48F 288.6.4.8_user_648595120 release-keys"
+
