@@ -159,10 +159,6 @@ PRODUCT_COPY_FILES += \
     device/amazon/tank/configs/media_profiles.xml:system/etc/media_profiles.xml \
     device/amazon/tank/configs/mtk_omx_core.cfg:system/etc/mtk_omx_core.cfg
 
-# Keylayout
-PRODUCT_COPY_FILES += \
-    device/amazon/tank/keylayouts/Generic.kl:system/usr/keylayout/Generic.kl
-
 # Thermal
 PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/configs/thermal.conf:system/etc/.tp/thermal.conf \
@@ -172,7 +168,11 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-    libtinycompress
+    libtinycompress \
+    libtinyalsa
+# 
+PRODUCT_PACKAGES += \
+    libtinyxml
 
 # Bluetooth
 PRODUCT_PACKAGES += \
