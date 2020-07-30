@@ -18,6 +18,7 @@ LOCAL_OVERRIDES_PACKAGES := \
 	Camera2 \
 	Contacts \
 	ContactsProvider \
+        CMFileManager \
 	DeskClock \
 	Eleven \
 	Email \
