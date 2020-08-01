@@ -103,7 +103,11 @@ PRODUCT_PACKAGES += \
     tv_input.default \
     LeanbackLauncher \
     LeanbackIme \
-    Overscan
+    Overscan \
+    TV \
+    RemoteControlService \
+    AtvRemoteService \
+    GlobalKeyInterceptor
 
 # Enable frame-exact AV sync
 PRODUCT_PROPERTY_OVERRIDES += \

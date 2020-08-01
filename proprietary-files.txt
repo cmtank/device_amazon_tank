@@ -31,6 +31,8 @@ bin/wpa_supplicant
 xbin/trapz
 xbin/wl
 
+lib/libatv_uinputbridge.so
+
 etc/bluetooth/auto_pair_devlist.conf
 etc/bluetooth/bt_did.conf
 etc/bluetooth/btmac.sh
