@@ -22,6 +22,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     btremoted
 
+# libwebviewchromium
+PRODUCT_PACKAGES += \
+    libwebviewchromium \
+    libwebviewchromium_loader \
+    libwebviewchromium_plat_support
+
 # From build/target/product/core_base.mk
 PRODUCT_PACKAGES += \
     ContactsProvider \
