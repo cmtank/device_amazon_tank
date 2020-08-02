@@ -113,7 +113,8 @@ PRODUCT_PACKAGES += \
     TV \
     RemoteControlService \
     AtvRemoteService \
-    GlobalKeyInterceptor
+    GlobalKeyInterceptor \
+    AppDrawer
 
 # Enable frame-exact AV sync
 PRODUCT_PROPERTY_OVERRIDES += \
