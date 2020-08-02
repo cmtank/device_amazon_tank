@@ -8,40 +8,4 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
 LOCAL_CERTIFICATE := platform
 
-#Apps not used on TV
-LOCAL_OVERRIDES_PACKAGES := \
-	AudioFX \
-	BasicDreams \
-	Calculator \
-	Calendar \
-	CalendarProvider \
-	Camera2 \
-	Contacts \
-	ContactsProvider \
-        CMFileManager \
-	DeskClock \
-	Eleven \
-	Email \
-	Exchange2 \
-	Galaxy4 \
-	Gallery2 \
-	HoloSpiralWallpaper \
-	LiveWallpapers \
-	LiveWallpapersPicker \
-	LockClock \
-	MmsService \
-	PhaseBeam \
-	PhotoPhase \
-	PhotoTable \
-	PrintSpooler \
-	privacy-browser \
-	SoundRecorder \
-	Telecom \
-	TelephonyProvider \
-	TeleService \
-	ThemeChooser \
-	Trebuchet \
-	VisualizationWallpapers \
-	WallpaperCropper
-
 include $(BUILD_PREBUILT)
