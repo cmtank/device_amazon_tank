@@ -35,6 +35,11 @@ lib/libatv_uinputbridge.so
 
 lib/libarthook_native.so
 
+lib/libcast_bluetooth_2.0.so
+lib/libcast_external_audio_pipeline_1.0.so
+lib/libcast_shell_android.so
+lib/libcrashpad_handler.so
+
 etc/bluetooth/auto_pair_devlist.conf
 etc/bluetooth/bt_did.conf
 etc/bluetooth/btmac.sh
