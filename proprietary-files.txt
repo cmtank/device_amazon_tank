@@ -33,6 +33,8 @@ xbin/wl
 
 lib/libatv_uinputbridge.so
 
+lib/libarthook_native.so
+
 etc/bluetooth/auto_pair_devlist.conf
 etc/bluetooth/bt_did.conf
 etc/bluetooth/btmac.sh
