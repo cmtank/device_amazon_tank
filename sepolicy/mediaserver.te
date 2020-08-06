@@ -1,0 +1,2 @@
+allow mediaserver device:chr_file { ioctl open read };
+allow mediaserver init:binder call;
