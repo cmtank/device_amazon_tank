@@ -107,13 +107,6 @@ PRODUCT_PACKAGES += \
     TvProvider \
     TvSettings \
     tv_input.default \
-    LeanbackLauncher \
-    LeanbackIme \
-    Overscan \
-    TV \
-    RemoteControlService \
-    AtvRemoteService \
-    GlobalKeyInterceptor \
     AppDrawer
 
 # Enable frame-exact AV sync
@@ -217,4 +210,4 @@ $(call inherit-product, frameworks/native/build/tablet-7in-hdpi-1024-dalvik-heap
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/amazon/tank/tank-vendor.mk)
+$(call inherit-product-if-exists, vendor/amazon/tank/device-vendor.mk)
