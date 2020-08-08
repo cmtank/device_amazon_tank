@@ -127,4 +127,7 @@
          Below will adj 6 minfree buckets (in MB) to: 32, 40, 48, 56, 64, 80 -->
     <integer name="config_lowMemoryKillerMinFreeKbytesAbsolute">81920</integer>
 
+    <!-- Don't allow volume change on the device. -->
+    <bool name="config_useFixedVolume">true</bool>
+
 </resources>
