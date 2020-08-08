@@ -4,6 +4,11 @@ persist.service.adb.enable=1
 persist.service.debuggable=1
 persist.sys.usb.config=mtp,adb
 
+# GooglePlay
+ro.build.version.ota=2.1(22.18.61.16)                                                  
+ro.com.google.gmsversion=5.0_r2                                                        
+ro.com.google.clientidbase=android-nvidia
+
 # No RIL
 keyguard.no_require_sim=1
 ro.radio.use-ppp=no

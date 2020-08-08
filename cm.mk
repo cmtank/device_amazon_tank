@@ -17,6 +17,6 @@ PRODUCT_MANUFACTURER := amzn
 
 # Override the fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_FINGERPRINT=Amazon/full_tank/tank:5.1.1/LVY48F/288.6.4.8_user_648595120:user/release-keys \
-    PRIVATE_BUILD_DESC="full_tank-user 5.1.1 LVY48F 288.6.4.8_user_648595120 release-keys"
+    BUILD_FINGERPRINT=NVIDIA/foster_e/foster:5.1/LMY47D/35739_609.6420:user/release-keys \
+    PRIVATE_BUILD_DESC="foster_e-user 5.1 LMY47D 35739_609.6420 release-keys"
 
