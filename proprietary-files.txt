@@ -262,5 +262,3 @@ vendor/smartvolume/tank/wired_headset.csv
 -priv-app/AtvRemoteService/AtvRemoteService.apk
 #-priv-app/GamepadPairingService/GamepadPairingService.apk
 -priv-app/GlobalKeyInterceptor/GlobalKeyInterceptor.apk
--priv-app/RemoteControlService/RemoteControlService.apk
-#-priv-app/TV/TV.apk
