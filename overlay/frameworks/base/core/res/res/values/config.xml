@@ -91,4 +91,9 @@
         <item>14</item>
     </integer-array>
 
+    <!-- Wifi Dual Band support -->
+    <bool name="config_wifi_dual_band_support">true</bool>
+    <!-- Wifi background scan support -->
+    <bool name="config_wifi_background_scan_support">true</bool>
+
 </resources>
