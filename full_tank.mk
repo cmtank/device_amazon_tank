@@ -158,7 +158,8 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:system/etc/media_codecs_google_video_le.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
-    frameworks/av/media/libeffects/data/audio_effects.conf:system/etc/audio_effects.conf \
+    device/amazon/tank/configs/audio_effects.conf:vendor/etc/audio_effects.conf \
+    device/amazon/tank/configs/ds-default.xml:vendor/etc/dolby/ds-default.xml \
     device/amazon/tank/configs/audio_policy.conf:system/etc/audio_policy.conf \
     device/amazon/tank/configs/media_codecs.xml:system/etc/media_codecs.xml \
     device/amazon/tank/configs/media_profiles.xml:system/etc/media_profiles.xml \

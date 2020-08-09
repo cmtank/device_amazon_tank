@@ -218,8 +218,8 @@ vendor/data/ttp/skype-raider.rsa
 vendor/data/ttp/tecla-2013.rsa
 vendor/data/ttp/tecla-2014.rsa
 vendor/data/ttp/viber-voip.rsa
-vendor/etc/audio_effects.conf
-vendor/etc/dolby/ds-default.xml
+#vendor/etc/audio_effects.conf
+#vendor/etc/dolby/ds-default.xml
 vendor/firmware/BCM43569A2_001.003.004.0172.0000_Generic_UART_40MHz_fcbga_BU_AmazonTank.hcd
 vendor/firmware/brcm/bcm43569a2-firmware-test.bin
 vendor/firmware/brcm/bcm43569a2-firmware.bin
