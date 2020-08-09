@@ -254,7 +254,7 @@ vendor/smartvolume/tank/dgtl_dock_headeset.csv
 vendor/smartvolume/tank/speaker.csv
 vendor/smartvolume/tank/wired_headphone.csv
 vendor/smartvolume/tank/wired_headset.csv
--vendor/app/Ds/Ds.apk
+#-vendor/app/Ds/Ds.apk
 
 -priv-app/LeanbackLauncher/LeanbackLauncher.apk
 -priv-app/LeanbackIme/LeanbackIme.apk
@@ -263,4 +263,4 @@ vendor/smartvolume/tank/wired_headset.csv
 #-priv-app/GamepadPairingService/GamepadPairingService.apk
 -priv-app/GlobalKeyInterceptor/GlobalKeyInterceptor.apk
 -priv-app/RemoteControlService/RemoteControlService.apk
--priv-app/TV/TV.apk
+#-priv-app/TV/TV.apk
