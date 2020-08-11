@@ -175,7 +175,10 @@ PRODUCT_COPY_FILES += \
 # Audio
 PRODUCT_PACKAGES += \
     libtinycompress \
-    libtinyalsa
+    libtinyalsa \
+    libaudio-resampler \
+    libsoundtriggerservice
+
 # 
 PRODUCT_PACKAGES += \
     libtinyxml
@@ -183,6 +186,21 @@ PRODUCT_PACKAGES += \
 # Bluetooth
 PRODUCT_PACKAGES += \
     bluetooth.default
+
+# Packages
+PRODUCT_PACKAGES += \
+    audio.a2dp.default \
+    audio.btle.default \
+    audio_policy.default \
+    audio_policy.stub \
+    audio.primary.default \
+    audio.r_submix.default \
+    audio.usb.default \
+    gralloc.default \
+    hdmi_cec.default \
+    keystore.default \
+    local_time.default \
+    tv_input.default
 
 # Power
 PRODUCT_PACKAGES += \

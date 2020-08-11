@@ -1,3 +1,4 @@
+## /system/bin/ ##
 bin/6620_launcher
 bin/akmd09911
 bin/akmd8963
@@ -28,18 +29,11 @@ bin/thermal_manager
 bin/wmt_loader
 bin/wpa_supplicant
 
+## /system/xbin/ ##
 xbin/trapz
 xbin/wl
 
-lib/libatv_uinputbridge.so
-
-lib/libarthook_native.so
-
-lib/libcast_bluetooth_2.0.so
-lib/libcast_external_audio_pipeline_1.0.so
-lib/libcast_shell_android.so
-lib/libcrashpad_handler.so
-
+## /system/etc/ ##
 etc/bluetooth/auto_pair_devlist.conf
 etc/bluetooth/bt_did.conf
 etc/bluetooth/btmac.sh
@@ -54,65 +48,74 @@ etc/wifi/p2p_supplicant_overlay.conf
 etc/wifi/wpa_supplicant.conf
 etc/wifi/wpa_supplicant_overlay.conf
 
+## /system/lib/egl/ ##
 lib/egl/libEGL_mali.so
 lib/egl/libGLESv1_CM_mali.so
 lib/egl/libGLESv2_mali.so
 
+## /system/lib/hw/ ##
 lib/hw/amzn_dha.mt8127.so
 lib/hw/amzn_drmprov.mt8127.so
-lib/hw/audio.a2dp.default.so
+#lib/hw/audio.a2dp.default.so
 lib/hw/audio.btle.default.so
-lib/hw/audio_policy.default.so
-lib/hw/audio_policy.stub.so
-lib/hw/audio.primary.default.so
+#lib/hw/audio_policy.default.so
+#lib/hw/audio_policy.stub.so
+#lib/hw/audio.primary.default.so
 lib/hw/audio.primary.mt8127.so
-lib/hw/audio.r_submix.default.so
+#lib/hw/audio.r_submix.default.so
 lib/hw/audio.sco.mt8127.so
-lib/hw/audio.usb.default.so
-lib/hw/gralloc.default.so
+#lib/hw/audio.usb.default.so
+#lib/hw/gralloc.default.so
 lib/hw/gralloc.mt8127.so
 lib/hw/hdmi_cec.default.so
 lib/hw/hwcomposer.mt8127.so
-lib/hw/keystore.default.so
+#lib/hw/keystore.default.so
 lib/hw/keystore.mt8127.so
-lib/hw/local_time.default.so
+#lib/hw/local_time.default.so
 lib/hw/memtrack.mt8127.so
 lib/hw/thermal.mt8127.so
-lib/hw/tv_input.default.so
+#lib/hw/tv_input.default.so
 
+## /system/lib/modules/ ##
+lib/modules/bcmdhd.ko
+lib/modules/ozwpan.ko
+
+## /system/lib/soundfx/ ##
+lib/soundfx/libaudiopreprocessing.so
+lib/soundfx/libbundlewrapper.so
+lib/soundfx/libdownmix.so
+lib/soundfx/libeffectproxy.so
+lib/soundfx/libldnhncr.so
+lib/soundfx/libreverbwrapper.so
+lib/soundfx/libvisualizer.so
+
+## /system/lib/ ##
 lib/lib3a.so
 lib/libaed.so
 lib/libamazon_remotes.so
+lib/libarthook_native.so
+lib/libatv_uinputbridge.so
 lib/libaudiocompensationfilter.so
 lib/libaudiocomponentengine.so
 lib/libaudiocustparam.so
 lib/libaudiodcrflt.so
-lib/libaudioeffect_jni.so
-lib/libaudioflinger.so
-lib/libaudiopolicymanagerdefault.so
-lib/libaudiopolicymanager.so
-lib/libaudiopolicyservice.so
-lib/libaudio-resampler.so
-lib/libaudioresampler.so
 lib/libaudiosetting.so
 lib/libaudiospdif.so
 lib/libaudiostream_jni.so
 lib/libaudiostream.so
-lib/libaudioutils.so
-
 lib/libbessound_hd_mtk.so
 lib/libbessound_mtk.so
-
 lib/libblisrc32.so
 lib/libblisrc.so
 lib/libbwc.so
-
-
+lib/libcast_bluetooth_2.0.so
+lib/libcast_external_audio_pipeline_1.0.so
+lib/libcast_shell_android.so
+lib/libcrashpad_handler.so
 lib/libcustom_nvram.so
 lib/libcvsd_mtk.so
 lib/libdeviceinfoservice.so
 lib/libdpframework.so
-lib/libdrmframework_jni.so
 lib/libdrmmtkutil.so
 lib/libdrmplayreadydecryptor.so
 lib/libfeatureio.so
@@ -139,34 +142,25 @@ lib/libmp2dec_sa.ca7.so
 lib/libmp2dec_sb.ca7.so
 lib/libmp4enc_sa.ca7.so
 lib/libmsbc_mtk.so
-lib/libm.so
-
 lib/libmtk_drvb.so
 lib/libmtkjpeg.so
 lib/libmtklimiter.so
 lib/libmtk_mali_user.so
-
 lib/libMtkOmxAIVPlayer.so
 lib/libMtkOmxCore.so
 lib/libMtkOmxMp3Dec.so
 lib/libMtkOmxVdec.so
 lib/libMtkOmxVenc.so
-
 lib/libmtkshifter.so
-
-lib/libnvramagentclient.so
 lib/libnvramagentclient.so
 lib/libnvram_daemon_callback.so
 lib/libnvram_platform.so
 lib/libnvram_sec.so
 lib/libnvram.so
-
 lib/libopuscodec.so
 lib/libperfservicenative.so
 lib/libplayready.so
 lib/libqservice.so
-lib/libsoundtriggerservice.so
-lib/libsoundtrigger.so
 lib/libspeech_enh_lib.so
 lib/libstagefrighthw.so
 lib/libSwJpgCodec.so
@@ -179,7 +173,6 @@ lib/liburee_meta_drmkeyinstall_v2.so
 lib/lib_uree_mtk_crypto.so
 lib/lib_uree_mtk_modular_drm.so
 lib/lib_uree_mtk_video_secure_al.so
-lib/libusbhost.so
 lib/libusb.so
 lib/libvc1dec_sa.ca7.so
 lib/libvcodecdrv.so
@@ -190,19 +183,11 @@ lib/libvp9dec_sa.ca7.so
 lib/libwlfAmzn.so
 lib/libwlm.so
 
-lib/modules/bcmdhd.ko
-lib/modules/ozwpan.ko
-
-lib/soundfx/libaudiopreprocessing.so
-lib/soundfx/libbundlewrapper.so
-lib/soundfx/libdownmix.so
-lib/soundfx/libeffectproxy.so
-lib/soundfx/libldnhncr.so
-lib/soundfx/libreverbwrapper.so
-lib/soundfx/libvisualizer.so
+## no audio ##
+lib/libaudioflinger.so
+lib/libaudioutils.so
 
 ## FULL VENDOR ##
-
 #vendor/app/Ds/Ds.apk
 #vendor/app/Ds/arm/Ds.odex
 vendor/data/amz.rsa
@@ -255,6 +240,9 @@ vendor/smartvolume/tank/speaker.csv
 vendor/smartvolume/tank/wired_headphone.csv
 vendor/smartvolume/tank/wired_headset.csv
 #-vendor/app/Ds/Ds.apk
+
+
+## APKS ##
 
 -priv-app/LeanbackLauncher/LeanbackLauncher.apk
 -priv-app/LeanbackIme/LeanbackIme.apk
