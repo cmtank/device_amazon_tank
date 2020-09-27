@@ -12,6 +12,7 @@ bin/auto_hdmi.sh
 bin/drmserver
 bin/ext4_resize
 bin/hdmi
+bin/hostapd
 bin/idme
 bin/kisd
 bin/meta_tst
@@ -189,6 +190,7 @@ lib/libvp8dec_sa.ca7.so
 lib/libvp9dec_sa.ca7.so
 lib/libwlfAmzn.so
 lib/libwlm.so
+lib/libwpa_client.so
 
 lib/modules/bcmdhd.ko
 lib/modules/ozwpan.ko
