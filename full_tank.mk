@@ -184,6 +184,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     bluetooth.default
 
+# Wifi
+PRODUCT_PACKAGES += \
+    hostapd \
+    libwpa_client \
+    wpa_supplicant
+
 # Power
 PRODUCT_PACKAGES += \
     power.default
