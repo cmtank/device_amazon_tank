@@ -127,9 +127,6 @@
          Below will adj 6 minfree buckets (in MB) to: 32, 40, 48, 56, 64, 80 -->
     <integer name="config_lowMemoryKillerMinFreeKbytesAbsolute">81920</integer>
 
-    <!-- Don't allow volume change on the device. -->
-    <bool name="config_useFixedVolume">true</bool>
-
     <!-- If supported and enabled, are dreams activated when asleep and charging? (by default) -->
     <bool name="config_dreamsActivatedOnSleepByDefault">true</bool>
 
